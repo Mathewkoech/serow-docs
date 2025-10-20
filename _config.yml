@@ -1,0 +1,9 @@
+theme: minima
+title: Serow ERP Docs
+description: Documentation for erp.serow.app
+baseurl: "/serow-docs"
+url: "https://mathewkoech.github.io"
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
