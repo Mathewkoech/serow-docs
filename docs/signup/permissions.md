@@ -205,6 +205,6 @@ If you have multiple branches or locations:
 3. Reassign specific users to the new role
 
 ## Next Steps
-- Create users and assign roles: [Users Management](users.md)
-- Learn about inviting users: [User Invitations](invitations.md)
+- Create users and assign roles: [Users Management]({{ site.baseurl }}/signup/users/)
+- Learn about inviting users: [User Invitations]({{ site.baseurl }}/signup/invitations/)
 - Set up branch access in Settings

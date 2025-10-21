@@ -23,13 +23,13 @@ Record and reconcile customer and supplier payments.
 3. Confirm reconciliation.
 
 ## Integrations
-- Links to [Invoices](invoices.md).
-- Syncs with [Reports](reports.md).
+- Links to Invoices (coming soon).
+- Syncs with [Reports]({{ site.baseurl }}/accounts/reports/).
 
 ## Tips/Troubleshooting
 - Use correct bank statements.
 - Check for duplicate entries.
 
 ## Next Steps
-- Manage invoices in [Invoices](invoices.md).
-- Review journals in [Journals](journals.md).
+- Manage receipts in [Receipts]({{ site.baseurl }}/accounts/receipts/).
+- Review journals in [Journals]({{ site.baseurl }}/accounts/journals/).

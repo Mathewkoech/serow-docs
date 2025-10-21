@@ -360,7 +360,7 @@ If internet disconnected:
 - Keep receipts organized
 
 ## Next Steps
-- View [Sales](sales.md) reports
-- Process [Sale Receipts](sale-receipts.md)
-- Manage [Collect Payment](collect-payment.md)
-- Review [Transactions](transactions.md)
+- View [Sales]({{ site.baseurl }}/pos/sales/) reports
+- Process [Sale Receipts]({{ site.baseurl }}/pos/sale-receipts/)
+- Manage [Collect Payment]({{ site.baseurl }}/pos/collect-payment/)
+- Review [Transactions]({{ site.baseurl }}/pos/transactions/)

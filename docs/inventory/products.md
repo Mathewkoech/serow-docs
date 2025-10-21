@@ -29,6 +29,9 @@ Before creating items, you can organize them using:
 1. Go to **Inventory** > **Items**
 2. Click **Create** or **New Item** button
 
+![Item Creation Form]({{ site.baseurl }}/assets/images/inventory/item-creation.png)
+*Create a new inventory item by filling in the product details*
+
 ### Step 2: Basic Information
 - **Item Name** - Full product name
   - Example: "Paracetamol 500mg Tablets"
@@ -356,7 +359,7 @@ Available reports for items:
 - Train staff on item codes
 
 ## Next Steps
-- [Configure Stock Adjustments](adjustments.md)
-- [Learn About Stock Transfers](#)
-- [View Inventory Reports](reporting.md)
-- [Set Up Pricing Formulae](#)
+- [Configure Stock Adjustments]({{ site.baseurl }}/inventory/adjustments/)
+- [Learn About Stock Operations]({{ site.baseurl }}/inventory/operations/)
+- [View Inventory Reports]({{ site.baseurl }}/inventory/reporting/)
+- [Inventory Configuration]({{ site.baseurl }}/inventory/configuration/)

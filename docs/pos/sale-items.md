@@ -85,6 +85,6 @@ Displays each sale line item:
 - Sales Person Performance
 
 ## Next Steps
-- View [Sales](sales.md) summary
-- Generate [Invoices](../accounts/invoices.md)
-- Check [Inventory](../inventory/products.md)
+- View [Sales]({{ site.baseurl }}/pos/sales/) summary
+- Generate Invoices (coming soon)
+- Check [Inventory]({{ site.baseurl }}/inventory/products/)

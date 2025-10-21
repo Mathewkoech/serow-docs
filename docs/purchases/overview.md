@@ -12,7 +12,7 @@ The Purchases module manages your complete procurement process, from supplier ma
 ## Module Sections
 
 ### Supplier Management
-- **[Suppliers](suppliers.md)** - Manage supplier database
+- **[Suppliers]({{ site.baseurl }}/purchases/suppliers/)** - Manage supplier database
 - **Supplier Items** - Link items to suppliers
 - **Supplier Credits** - Credit notes from suppliers
 - **Supplier Payments** - Payment tracking
@@ -20,14 +20,14 @@ The Purchases module manages your complete procurement process, from supplier ma
 - **Supplier Aging** - Outstanding balances
 
 ### Purchase Operations
-- **[Purchase Orders](purchase-orders.md)** - Create and manage POs
-- **[Bills](bills.md)** - Process supplier invoices  
+- **[Purchase Orders]({{ site.baseurl }}/purchases/purchase-orders/)** - Create and manage POs
+- **[Bills]({{ site.baseurl }}/purchases/bills/)** - Process supplier invoices  
 - **Purchases** - Direct purchases
 
 ### Receiving & Returns
-- **[Received Items](received-items.md)** - Record goods received
+- **[Received Items]({{ site.baseurl }}/purchases/received-items/)** - Record goods received
 - **InTransit Receives** - Track items in transit
-- **[Returned Items](returns.md)** - Returns to suppliers
+- **[Returned Items]({{ site.baseurl }}/purchases/returns/)** - Returns to suppliers
 
 ## Purchase Workflow
 
@@ -64,7 +64,7 @@ The Purchases module manages your complete procurement process, from supplier ma
 
 ## Getting Started
 
-1. [Add Suppliers](suppliers.md)
-2. [Create Purchase Orders](purchase-orders.md)
-3. [Receive Items](received-items.md)
-4. [Process Bills](bills.md)
+1. [Add Suppliers]({{ site.baseurl }}/purchases/suppliers/)
+2. [Create Purchase Orders]({{ site.baseurl }}/purchases/purchase-orders/)
+3. [Receive Items]({{ site.baseurl }}/purchases/received-items/)
+4. [Process Bills]({{ site.baseurl }}/purchases/bills/)

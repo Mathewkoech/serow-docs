@@ -235,7 +235,7 @@ Access your dashboard on mobile devices:
 
 ## Next Steps
 
-- **[Generate Detailed Reports](reports/)**: Create custom reports for deeper insights
+- **[Generate Detailed Reports]({{ site.baseurl }}/analytics/reports/)**: Create custom reports for deeper insights
 - **[Set Up Alerts]({{ site.baseurl }}/analytics/overview/)**: Get notified of important events
 - **[Explore Inventory Analytics]({{ site.baseurl }}/inventory/reporting/)**: Dive deeper into stock analysis
 - **[View Sales Reports]({{ site.baseurl }}/pos/overview/)**: Analyze sales performance

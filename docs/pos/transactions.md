@@ -252,6 +252,6 @@ Every transaction records:
 - Check timing differences
 
 ## Next Steps
-- View [Sales](sales.md) summary
-- Generate [Reports](../analytics/reports.md)
-- Reconcile with [Accounts](../accounts/journals.md)
+- View [Sales]({{ site.baseurl }}/pos/sales/) summary
+- Generate [Reports]({{ site.baseurl }}/analytics/reports/)
+- Reconcile with [Accounts]({{ site.baseurl }}/accounts/journals/)

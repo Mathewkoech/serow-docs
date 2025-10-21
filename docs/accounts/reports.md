@@ -22,13 +22,13 @@ Generate financial reports for profit, loss, and balance sheets.
 2. Share with management.
 
 ## Integrations
-- Links to [Analytics](analytics.md).
-- Syncs with [Journals](journals.md).
+- Links to Analytics.
+- Syncs with [Journals]({{ site.baseurl }}/accounts/journals/).
 
 ## Tips/Troubleshooting
 - Use filters for specific periods.
 - Check data accuracy.
 
 ## Next Steps
-- Manage payments in [Payments](payments.md).
-- Review invoices in [Invoices](invoices.md).
+- Manage payments in [Payments]({{ site.baseurl }}/accounts/payments/).
+- Review journals in [Journals]({{ site.baseurl }}/accounts/journals/).

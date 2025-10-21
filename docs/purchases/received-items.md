@@ -22,7 +22,7 @@ Track and verify items received from suppliers.
 2. Note issues for supplier.
 
 ## Integrations
-- Links to [Purchase Orders](purchase-orders.md).
+- Links to [Purchase Orders]({{ site.baseurl }}/purchases/purchase-orders/).
 - Syncs with Inventory.
 
 ## Tips/Troubleshooting
@@ -30,5 +30,5 @@ Track and verify items received from suppliers.
 - Check stock updates.
 
 ## Next Steps
-- Manage bills in [Bills](bills.md).
-- Handle returns in [Returns](returns.md).
+- Manage bills in [Bills]({{ site.baseurl }}/purchases/bills/).
+- Handle returns in [Returns]({{ site.baseurl }}/purchases/returns/).

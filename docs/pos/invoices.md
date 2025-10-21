@@ -384,7 +384,7 @@ Available invoice reports:
 - Keep accurate records
 
 ## Next Steps
-- Record [Payments](collect-payment.md)
-- Issue [Receipts](sale-receipts.md)
-- Handle [Credit Notes](credit-notes.md)
-- View [Sales Reports](sales.md)
+- Record [Payments]({{ site.baseurl }}/pos/collect-payment/)
+- Issue [Receipts]({{ site.baseurl }}/pos/sale-receipts/)
+- Handle [Credit Notes]({{ site.baseurl }}/pos/credit-notes/)
+- View [Sales Reports]({{ site.baseurl }}/pos/sales/)

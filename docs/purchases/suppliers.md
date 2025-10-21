@@ -22,13 +22,13 @@ Manage supplier details and communication for purchasing.
 3. Save changes.
 
 ## Integrations
-- Links to [Purchase Orders](purchase-orders.md).
-- Syncs with [Bills](bills.md).
+- Links to [Purchase Orders]({{ site.baseurl }}/purchases/purchase-orders/).
+- Syncs with [Bills]({{ site.baseurl }}/purchases/bills/).
 
 ## Tips/Troubleshooting
 - Verify contact details.
 - Check for duplicate entries.
 
 ## Next Steps
-- Create purchase orders in [Purchase Orders](purchase-orders.md).
-- Manage received items in [Received Items](received-items.md).
+- Create purchase orders in [Purchase Orders]({{ site.baseurl }}/purchases/purchase-orders/).
+- Manage received items in [Received Items]({{ site.baseurl }}/purchases/received-items/).

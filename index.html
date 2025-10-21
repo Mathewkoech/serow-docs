@@ -2,34 +2,117 @@
 layout: none
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serow ERP Documentation</title>
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --bg-tertiary: #e9ecef;
+      --text-primary: #1a1a1a;
+      --text-secondary: #6c757d;
+      --text-tertiary: #868e96;
+      --border-color: #dee2e6;
+      --accent-color: #007bff;
+      --accent-hover: #0056b3;
+      --shadow: rgba(0, 0, 0, 0.05);
+      --shadow-hover: rgba(0, 123, 255, 0.15);
+      --icon-color: #6c757d;
+      --search-bg: #ffffff;
+      --code-bg: #f8f9fa;
+    }
+    
+    [data-theme="dark"] {
+      --bg-primary: #1a1a1a;
+      --bg-secondary: #2d2d2d;
+      --bg-tertiary: #3a3a3a;
+      --text-primary: #e9ecef;
+      --text-secondary: #adb5bd;
+      --text-tertiary: #868e96;
+      --border-color: #495057;
+      --accent-color: #4dabf7;
+      --accent-hover: #74c0fc;
+      --shadow: rgba(0, 0, 0, 0.3);
+      --shadow-hover: rgba(77, 171, 247, 0.25);
+      --icon-color: #adb5bd;
+      --search-bg: #2d2d2d;
+      --code-bg: #2d2d2d;
+    }
+    
+    * {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+    
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #F8F9FA;
-      color: #343A40;
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
       display: flex;
+      font-size: 15px;
     }
     .sidebar {
-      width: 250px;
-      background: #FFFFFF;
+      width: 260px;
+      background: var(--bg-primary);
       height: 100vh;
       position: fixed;
       overflow-y: auto;
-      border-right: 1px solid #DEE2E6;
+      border-right: 1px solid var(--border-color);
       padding: 20px;
+      box-shadow: 2px 0 8px var(--shadow);
+    }
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .sidebar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .sidebar::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 3px;
+    }
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
     }
     .sidebar h2 {
-      font-size: 1.5em;
-      color: #007BFF;
-      margin-bottom: 15px;
+      font-size: 1.4em;
+      color: var(--accent-color);
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .theme-toggle {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--icon-color);
+      font-size: 16px;
+      transition: all 0.2s;
+    }
+    .theme-toggle:hover {
+      background: var(--accent-color);
+      color: white;
+      border-color: var(--accent-color);
+      transform: scale(1.05);
     }
     .sidebar .search-container {
       margin-bottom: 20px;
@@ -37,29 +120,53 @@ layout: none
     }
     .sidebar .search-container input {
       width: 100%;
-      padding: 8px 30px 8px 10px;
-      border: 1px solid #DEE2E6;
-      border-radius: 4px;
+      padding: 10px 36px 10px 36px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
       font-size: 0.9em;
       outline: none;
-      transition: border-color 0.2s;
+      background: var(--search-bg);
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
     }
     .sidebar .search-container input:focus {
-      border-color: #007BFF;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px var(--shadow-hover);
+    }
+    .sidebar .search-container input::placeholder {
+      color: var(--text-tertiary);
+    }
+    .sidebar .search-container .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--icon-color);
+      font-size: 14px;
+      pointer-events: none;
     }
     .sidebar .search-container button {
       position: absolute;
-      right: 10px;
+      right: 8px;
       top: 50%;
       transform: translateY(-50%);
       background: none;
       border: none;
-      color: #6B7280;
+      color: var(--icon-color);
       cursor: pointer;
-      font-size: 0.9em;
+      font-size: 16px;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      transition: all 0.2s;
     }
     .sidebar .search-container button:hover {
-      color: #0056B3;
+      background: var(--bg-tertiary);
+      color: var(--accent-color);
     }
     .sidebar ul {
       list-style: none;
@@ -69,85 +176,92 @@ layout: none
       margin: 10px 0;
     }
     .sidebar ul li a {
-      color: #343A40;
+      color: var(--text-primary);
       text-decoration: none;
       font-weight: 500;
       display: block;
-      padding: 5px 10px;
-      border-radius: 4px;
-      transition: background 0.2s, color 0.2s;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-size: 0.9em;
     }
     .sidebar ul li a:hover {
-      color: #0056B3;
-      background: #E9ECEF;
+      color: var(--accent-color);
+      background: var(--bg-tertiary);
     }
     .sidebar ul li a.active {
-      color: #007BFF;
-      font-weight: bold;
-      background: #E9ECEF;
+      color: var(--accent-color);
+      font-weight: 600;
+      background: var(--bg-tertiary);
     }
     .sidebar ul ul {
-      padding-left: 20px;
-      display: none;
-    }
-    .sidebar ul li.active ul {
+      padding-left: 30px;
       display: block;
+      margin-top: 4px;
+      margin-bottom: 8px;
     }
     .sidebar ul ul li a {
-      font-size: 0.9em;
-      color: #6B7280;
+      font-size: 0.85em;
+      color: var(--text-secondary);
+      padding: 6px 12px;
     }
     .sidebar ul ul li a:hover {
-      color: #0056B3;
-      background: #F1F3F5;
+      color: var(--accent-color);
+      background: var(--bg-tertiary);
     }
     .sidebar ul ul li a.active {
-      color: #007BFF;
-      background: #F1F3F5;
+      color: var(--accent-color);
+      background: var(--bg-tertiary);
+      font-weight: 600;
     }
-    .sidebar .dropdown-toggle {
-      cursor: pointer;
-      display: inline-block;
+    .sidebar .nav-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       width: 100%;
-      padding: 5px 10px;
-      color: #343A40;
-      font-weight: 500;
-      border-radius: 4px;
-      transition: background 0.2s, color 0.2s;
+      padding: 8px 12px;
+      color: var(--text-primary);
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-size: 0.9em;
+      cursor: default;
+      margin-top: 8px;
     }
-    .sidebar .dropdown-toggle:hover {
-      color: #0056B3;
-      background: #E9ECEF;
+    .sidebar .nav-section .icon {
+      font-size: 1em;
+      width: 18px;
+      display: inline-flex;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--icon-color);
     }
-    .sidebar .dropdown-toggle.active {
-      color: #007BFF;
-      background: #E9ECEF;
+    .sidebar .nav-section.active {
+      color: var(--accent-color);
+      background: var(--bg-tertiary);
     }
-    .sidebar .dropdown-toggle::after {
-      content: '▼';
-      float: right;
-      font-size: 0.8em;
-      transition: transform 0.3s;
-    }
-    .sidebar .dropdown-toggle.active::after {
-      transform: rotate(180deg);
+    .sidebar .nav-section.active .icon {
+      color: var(--accent-color);
     }
     .main-content {
-      margin-left: 270px;
+      margin-left: 280px;
       padding: 40px;
-      max-width: 900px;
+      max-width: 1200px;
     }
     .hero {
       text-align: center;
-      background: linear-gradient(135deg, #007BFF 0%, #0056B3 100%);
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
       color: white;
       padding: 60px 20px;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 40px;
+      box-shadow: 0 4px 20px var(--shadow);
     }
     .hero h1 {
       font-size: 2.5em;
       margin: 0 0 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
     .card-grid {
       display: grid;
@@ -156,26 +270,27 @@ layout: none
       margin: 30px 0;
     }
     .card {
-      background: white;
-      border: 1px solid #DEE2E6;
-      border-radius: 8px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
       padding: 24px;
       transition: all 0.3s ease;
       cursor: pointer;
       text-decoration: none;
       color: inherit;
       display: block;
+      box-shadow: 0 2px 8px var(--shadow);
     }
     .card:hover {
-      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
-      border-color: #007BFF;
-      transform: translateY(-2px);
+      box-shadow: 0 4px 16px var(--shadow-hover);
+      border-color: var(--accent-color);
+      transform: translateY(-4px);
     }
     .card-icon {
       width: 48px;
       height: 48px;
-      background: linear-gradient(135deg, #007BFF 0%, #0056B3 100%);
-      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -186,13 +301,14 @@ layout: none
     .card h3 {
       margin: 0 0 8px 0;
       font-size: 1.2em;
-      color: #343A40;
+      color: var(--text-primary);
+      font-weight: 600;
     }
     .card p {
       margin: 0;
-      color: #6C757D;
+      color: var(--text-secondary);
       font-size: 0.9em;
-      line-height: 1.5;
+      line-height: 1.6;
     }
     .btn {
       display: inline-block;
@@ -225,11 +341,14 @@ layout: none
     .section h2 {
       font-size: 1.8em;
       margin-bottom: 10px;
-      color: #343A40;
+      color: var(--text-primary);
+      font-weight: 600;
+      letter-spacing: -0.01em;
     }
     .section p {
-      color: #6C757D;
+      color: var(--text-secondary);
       margin-bottom: 20px;
+      line-height: 1.6;
     }
     .quick-links {
       display: flex;
@@ -239,10 +358,20 @@ layout: none
     }
     footer {
       text-align: center;
-      padding: 20px;
-      background: #343A40;
-      color: white;
+      padding: 30px 20px;
+      background: var(--bg-primary);
+      color: var(--text-secondary);
       margin-top: 60px;
+      border-top: 1px solid var(--border-color);
+    }
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
     }
     @media (max-width: 768px) {
       .sidebar {
@@ -262,10 +391,16 @@ layout: none
 </head>
 <body>
   <aside class="sidebar">
-    <h2>Serow Docs</h2>
+    <div class="sidebar-header">
+      <h2>Serow Docs</h2>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+    </div>
     <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
       <input type="text" id="searchInput" placeholder="Search docs..." />
-      <button id="clearSearch" title="Clear search">✕</button>
+      <button id="clearSearch" title="Clear search"><i class="fas fa-times"></i></button>
     </div>
     <ul id="navLinks">
       <li><a href="{{ site.baseurl }}/" class="active">Introduction</a></li>
@@ -273,55 +408,70 @@ layout: none
       <li><a href="{{ site.baseurl }}/installation/">Installation Guide</a></li>
       <li><a href="{{ site.baseurl }}/app/">Apps for Different OS</a></li>
       <li>
-        <span class="dropdown-toggle">Sign Up Module</span>
+        <span class="nav-section">Sign Up Module</span>
         <ul>
+          <li><a href="{{ site.baseurl }}/signup/overview/">Overview</a></li>
           <li><a href="{{ site.baseurl }}/signup/users/">Users</a></li>
           <li><a href="{{ site.baseurl }}/signup/permissions/">Permissions</a></li>
           <li><a href="{{ site.baseurl }}/signup/invitations/">Invitations</a></li>
         </ul>
       </li>
       <li>
-        <span class="dropdown-toggle">Inventory Module</span>
+        <span class="nav-section">Inventory Module</span>
         <ul>
+          <li><a href="{{ site.baseurl }}/inventory/overview/">Overview</a></li>
+          <li><a href="{{ site.baseurl }}/inventory/products/">Items (Products)</a></li>
           <li><a href="{{ site.baseurl }}/inventory/configuration/">Configuration</a></li>
-          <li><a href="{{ site.baseurl }}/inventory/products/">Products</a></li>
-          <li><a href="{{ site.baseurl }}/inventory/adjustments/">Inventory Adjustments</a></li>
-          <li><a href="{{ site.baseurl }}/inventory/operations/">Operations</a></li>
+          <li><a href="{{ site.baseurl }}/inventory/operations/">Stock Operations</a></li>
+          <li><a href="{{ site.baseurl }}/inventory/operations/#stock-take">Stock Take</a></li>
+          <li><a href="{{ site.baseurl }}/inventory/adjustments/">Stock Adjustments</a></li>
           <li><a href="{{ site.baseurl }}/inventory/reporting/">Reporting</a></li>
         </ul>
       </li>
       <li>
-        <span class="dropdown-toggle">POS Module</span>
+        <span class="nav-section">POS Module</span>
         <ul>
-          <li><a href="{{ site.baseurl }}/pos/setup/">Setup</a></li>
+          <li><a href="{{ site.baseurl }}/pos/overview/">Overview</a></li>
+          <li><a href="{{ site.baseurl }}/pos/quotations/">Quotations</a></li>
+          <li><a href="{{ site.baseurl }}/pos/sale-orders/">Sale Orders</a></li>
+          <li><a href="{{ site.baseurl }}/pos/delivery-notes/">Delivery Notes</a></li>
+          <li><a href="{{ site.baseurl }}/pos/invoices/">Invoices</a></li>
+          <li><a href="{{ site.baseurl }}/pos/return-note/">Return Note</a></li>
+          <li><a href="{{ site.baseurl }}/pos/sale-receipts/">Sale Receipts</a></li>
+          <li><a href="{{ site.baseurl }}/pos/pos-retail/">POS Retail</a></li>
+          <li><a href="{{ site.baseurl }}/pos/collect-payment/">Collect Payment</a></li>
           <li><a href="{{ site.baseurl }}/pos/sales/">Sales</a></li>
-          <li><a href="{{ site.baseurl }}/pos/sessions/">Sessions</a></li>
-          <li><a href="{{ site.baseurl }}/pos/refunds/">Refunds</a></li>
+          <li><a href="{{ site.baseurl }}/pos/sale-items/">Sale Items</a></li>
+          <li><a href="{{ site.baseurl }}/pos/credit-notes/">Credit Notes</a></li>
+          <li><a href="{{ site.baseurl }}/pos/transactions/">Transactions</a></li>
         </ul>
       </li>
       <li>
-        <span class="dropdown-toggle">Accounts Module</span>
+        <span class="nav-section">Accounts Module</span>
         <ul>
-          <li><a href="{{ site.baseurl }}/accounts/invoices/">Invoices</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/overview/">Overview</a></li>
           <li><a href="{{ site.baseurl }}/accounts/payments/">Payments</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/receipts/">Receipts</a></li>
           <li><a href="{{ site.baseurl }}/accounts/journals/">Journals</a></li>
           <li><a href="{{ site.baseurl }}/accounts/reports/">Reports</a></li>
         </ul>
       </li>
       <li>
-        <span class="dropdown-toggle">Purchases Module</span>
+        <span class="nav-section">Purchases Module</span>
         <ul>
+          <li><a href="{{ site.baseurl }}/purchases/overview/">Overview</a></li>
+          <li><a href="{{ site.baseurl }}/purchases/suppliers/">Suppliers</a></li>
           <li><a href="{{ site.baseurl }}/purchases/purchase-orders/">Purchase Orders</a></li>
           <li><a href="{{ site.baseurl }}/purchases/bills/">Bills</a></li>
-          <li><a href="{{ site.baseurl }}/purchases/suppliers/">Suppliers</a></li>
           <li><a href="{{ site.baseurl }}/purchases/received-items/">Received Items</a></li>
-          <li><a href="{{ site.baseurl }}/purchases/supplier-credit/">Supplier Credit</a></li>
           <li><a href="{{ site.baseurl }}/purchases/returns/">Returns</a></li>
+          <li><a href="{{ site.baseurl }}/purchases/supplier-credit/">Supplier Credit</a></li>
         </ul>
       </li>
       <li>
-        <span class="dropdown-toggle">Analytics Module</span>
+        <span class="nav-section">Analytics Module</span>
         <ul>
+          <li><a href="{{ site.baseurl }}/analytics/overview/">Overview</a></li>
           <li><a href="{{ site.baseurl }}/analytics/dashboards/">Dashboards</a></li>
           <li><a href="{{ site.baseurl }}/analytics/reports/">Reports</a></li>
         </ul>
@@ -345,32 +495,32 @@ layout: none
       <p>Choose a module to dive into detailed documentation and step-by-step guides.</p>
       <div class="card-grid">
         <a href="{{ site.baseurl }}/signup/users/" class="card">
-          <div class="card-icon">👥</div>
+          <div class="card-icon"><i class="fas fa-users"></i></div>
           <h3>Sign Up Module</h3>
           <p>Manage users, permissions, and team invitations for secure access control.</p>
         </a>
         <a href="{{ site.baseurl }}/inventory/configuration/" class="card">
-          <div class="card-icon">📦</div>
+          <div class="card-icon"><i class="fas fa-boxes"></i></div>
           <h3>Inventory Module</h3>
           <p>Track products, manage stock levels, and handle inventory operations seamlessly.</p>
         </a>
         <a href="{{ site.baseurl }}/pos/setup/" class="card">
-          <div class="card-icon">💳</div>
+          <div class="card-icon"><i class="fas fa-cash-register"></i></div>
           <h3>POS Module</h3>
           <p>Process sales, manage sessions, and handle refunds at your point of sale.</p>
         </a>
         <a href="{{ site.baseurl }}/accounts/invoices/" class="card">
-          <div class="card-icon">💰</div>
+          <div class="card-icon"><i class="fas fa-wallet"></i></div>
           <h3>Accounts Module</h3>
           <p>Create invoices, track payments, manage journals, and generate financial reports.</p>
         </a>
         <a href="{{ site.baseurl }}/purchases/purchase-orders/" class="card">
-          <div class="card-icon">🛒</div>
+          <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
           <h3>Purchases Module</h3>
           <p>Handle purchase orders, supplier management, bills, and returns efficiently.</p>
         </a>
         <a href="{{ site.baseurl }}/analytics/dashboards/" class="card">
-          <div class="card-icon">📊</div>
+          <div class="card-icon"><i class="fas fa-chart-line"></i></div>
           <h3>Analytics Module</h3>
           <p>Visualize business data with dashboards and comprehensive reports.</p>
         </a>
@@ -382,22 +532,22 @@ layout: none
       <p>Jump right into common tasks with these quick guides.</p>
       <div class="card-grid">
         <a href="{{ site.baseurl }}/getting-started/" class="card">
-          <div class="card-icon">🎯</div>
+          <div class="card-icon"><i class="fas fa-bullseye"></i></div>
           <h3>Getting Started</h3>
           <p>Set up your account, invite team members, and configure your first module.</p>
         </a>
         <a href="{{ site.baseurl }}/inventory/products/" class="card">
-          <div class="card-icon">➕</div>
+          <div class="card-icon"><i class="fas fa-plus-circle"></i></div>
           <h3>Add Your First Product</h3>
           <p>Learn how to add and configure products in your inventory system.</p>
         </a>
         <a href="{{ site.baseurl }}/pos/sales/" class="card">
-          <div class="card-icon">🏪</div>
+          <div class="card-icon"><i class="fas fa-store"></i></div>
           <h3>Process Your First Sale</h3>
           <p>Complete a transaction from start to finish using the POS system.</p>
         </a>
         <a href="{{ site.baseurl }}/accounts/invoices/" class="card">
-          <div class="card-icon">📄</div>
+          <div class="card-icon"><i class="fas fa-file-invoice"></i></div>
           <h3>Create an Invoice</h3>
           <p>Generate and send professional invoices to your customers.</p>
         </a>
@@ -409,17 +559,17 @@ layout: none
       <p>Find answers to common questions or reach out for support.</p>
       <div class="card-grid">
         <a href="{{ site.baseurl }}/installation/" class="card">
-          <div class="card-icon">⚙️</div>
+          <div class="card-icon"><i class="fas fa-cog"></i></div>
           <h3>Installation Guide</h3>
           <p>Step-by-step instructions for installing and configuring Serow ERP.</p>
         </a>
         <a href="{{ site.baseurl }}/app/" class="card">
-          <div class="card-icon">📱</div>
+          <div class="card-icon"><i class="fas fa-download"></i></div>
           <h3>Download Apps</h3>
           <p>Get Serow ERP for Windows, macOS, Linux, iOS, and Android.</p>
         </a>
         <a href="https://erp.serow.app" class="card" target="_blank">
-          <div class="card-icon">🌐</div>
+          <div class="card-icon"><i class="fas fa-globe"></i></div>
           <h3>Visit Serow ERP</h3>
           <p>Access the live application and start using Serow ERP today.</p>
         </a>
@@ -427,36 +577,53 @@ layout: none
     </section>
 
     <footer>
-      <p>&copy; 2025 Serow ERP. All rights reserved. | <a href="https://erp.serow.app" style="color: #007BFF;">Visit Serow</a></p>
+      <p>&copy; 2025 Serow ERP. All rights reserved. | <a href="https://erp.serow.app">Visit Serow</a></p>
     </footer>
   </div>
 
   <script>
-    // Toggle dropdown for module subpages
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        const subMenu = toggle.nextElementSibling;
-        const isActive = toggle.classList.toggle('active');
-        subMenu.style.display = isActive ? 'block' : 'none';
-      });
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+    
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
     });
 
-    // Highlight active link
+    // Existing scripts
+    
+    // Highlight active link and section
+    const currentPath = window.location.pathname;
     document.querySelectorAll('.sidebar a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelectorAll('.sidebar a.active').forEach(activeLink => activeLink.classList.remove('active'));
+      const linkPath = link.getAttribute('href');
+      if (currentPath.includes(linkPath) && linkPath !== '{{ site.baseurl }}/') {
         link.classList.add('active');
-      });
-    });
-
-    // Auto-open dropdown for active module
-    const currentPath = window.location.pathname.split('/').pop(); // Get the current file name
-    document.querySelectorAll('.sidebar ul ul a').forEach(link => {
-      if (link.getAttribute('href') === currentPath) {
-        const parentToggle = link.closest('ul').previousElementSibling;
-        parentToggle.classList.add('active');
-        link.closest('ul').style.display = 'block';
-        link.classList.add('active');
+        // Highlight parent section if this is a sub-item
+        const parentSection = link.closest('ul').previousElementSibling;
+        if (parentSection && parentSection.classList.contains('nav-section')) {
+          parentSection.classList.add('active');
+        }
       }
     });
 
@@ -464,7 +631,7 @@ layout: none
     const searchInput = document.getElementById('searchInput');
     const clearSearch = document.getElementById('clearSearch');
     const navLinks = document.getElementById('navLinks');
-    const allLinks = navLinks.querySelectorAll('a, .dropdown-toggle');
+    const allLinks = navLinks.querySelectorAll('a, .nav-section');
 
     searchInput.addEventListener('input', () => {
       const query = searchInput.value.toLowerCase();
@@ -476,14 +643,9 @@ layout: none
           parentLi.style.display = 'block';
           if (subMenu && subMenu.tagName === 'UL') {
             subMenu.style.display = 'block';
-            link.classList.add('active');
           }
         } else {
           parentLi.style.display = 'none';
-          if (subMenu && subMenu.tagName === 'UL') {
-            subMenu.style.display = 'none';
-            link.classList.remove('active');
-          }
         }
       });
     });
@@ -492,10 +654,6 @@ layout: none
       searchInput.value = '';
       allLinks.forEach(link => {
         link.closest('li').style.display = 'block';
-        const subMenu = link.nextElementSibling;
-        if (subMenu && subMenu.tagName === 'UL') {
-          subMenu.style.display = link.classList.contains('active') ? 'block' : 'none';
-        }
       });
     });
   </script>

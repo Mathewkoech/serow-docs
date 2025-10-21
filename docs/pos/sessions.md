@@ -22,13 +22,13 @@ Manage POS sessions for daily sales and closing procedures.
 3. Save and review report.
 
 ## Integrations
-- Links to [Sales](sales.md) data.
-- Syncs with [Accounts](accounts.md).
+- Links to [Sales]({{ site.baseurl }}/pos/sales/) data.
+- Syncs with Accounts.
 
 ## Tips/Troubleshooting
 - Match opening/closing balances.
 - Check for unposted sales.
 
 ## Next Steps
-- Process sales in [Sales](sales.md).
-- Handle refunds in [Refunds](refunds.md).
+- Process sales in [Sales]({{ site.baseurl }}/pos/sales/).
+- Handle refunds in [Refunds]({{ site.baseurl }}/pos/refunds/).

@@ -68,24 +68,24 @@ Once you've created your account:
 ## Essential First Steps by Module
 
 ### Inventory Management
-- [Set up your inventory configuration](inventory/configuration/)
-- [Add your first products](inventory/products/)
-- [Learn about inventory operations](inventory/operations/)
+- [Set up your inventory configuration]({{ site.baseurl }}/inventory/configuration/)
+- [Add your first products]({{ site.baseurl }}/inventory/products/)
+- [Learn about inventory operations]({{ site.baseurl }}/inventory/operations/)
 
 ### Point of Sale (POS)
-- [Configure your POS setup](pos/setup/)
-- [Process your first sale](pos/sales/)
-- [Manage POS sessions](pos/sessions/)
+- [Configure your POS overview]({{ site.baseurl }}/pos/overview/)
+- [Process your first sale]({{ site.baseurl }}/pos/sale-orders/)
+- [Learn about POS Retail]({{ site.baseurl }}/pos/pos-retail/)
 
 ### Accounting
-- [Create your first invoice](accounts/invoices/)
-- [Set up payment methods](accounts/payments/)
-- [Learn about journal entries](accounts/journals/)
+- [View accounts overview]({{ site.baseurl }}/accounts/overview/)
+- [Set up payment methods]({{ site.baseurl }}/accounts/payments/)
+- [Learn about journal entries]({{ site.baseurl }}/accounts/journals/)
 
 ### Purchasing
-- [Add suppliers](purchases/suppliers/)
-- [Create purchase orders](purchases/purchase-orders/)
-- [Process bills](purchases/bills/)
+- [Add suppliers]({{ site.baseurl }}/purchases/suppliers/)
+- [Create purchase orders]({{ site.baseurl }}/purchases/purchase-orders/)
+- [Process bills]({{ site.baseurl }}/purchases/bills/)
 
 ## Navigation Guide
 
@@ -123,8 +123,8 @@ Your central hub for:
 - Keep your business data safe and accessible
 
 ### Stay Updated
-- Check our [installation guide](installation/) for system requirements
-- Learn about available apps for different operating systems in [Apps](app/)
+- Check our [installation guide]({{ site.baseurl }}/installation/) for system requirements
+- Learn about available apps for different operating systems in [Apps]({{ site.baseurl }}/app/)
 - Follow our updates for new features and improvements
 
 ## Getting Help

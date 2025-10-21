@@ -7,15 +7,21 @@ permalink: /inventory/configuration/
 # Configuration
 
 ## Overview
-Set up inventory settings to manage products, warehouses, and stock levels.
+Configure basic inventory settings including Units of Measure, Warehouses, and default preferences.
 
-## Key Actions
+## Pricing Formula Settings
+
+Set up dynamic pricing rules based on cost, markup percentage, or custom formulas.
+
+![Pricing Formula Settings]({{ site.baseurl }}/assets/images/inventory/pricing-formula.png)
+*Configure dynamic pricing rules based on cost, markup, or custom formulas*
+
+## Quick Steps
 
 ### Configuring Warehouses
 1. Go to **Inventory** > **Configuration** > **Warehouses**.
 2. Add new warehouse (e.g., "Main Store").
 3. Set location and manager.
-4. Save to enable stock tracking.
 
 ### Setting Units of Measure
 1. Navigate to **Configuration** > **Units**.
@@ -31,5 +37,5 @@ Set up inventory settings to manage products, warehouses, and stock levels.
 - Check warehouse access rights.
 
 ## Next Steps
-- Add products in [Products](products.md).
-- Adjust stock in [Adjustments](adjustments.md).
+- Add products in [Products]({{ site.baseurl }}/inventory/products/).
+- Adjust stock in [Adjustments]({{ site.baseurl }}/inventory/adjustments/).

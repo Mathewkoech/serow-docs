@@ -22,13 +22,13 @@ Generate detailed analytical reports for business insights.
 2. Share with team.
 
 ## Integrations
-- Links to [Dashboards](dashboards.md).
-- Syncs with [Filters](filters.md).
+- Links to [Dashboards]({{ site.baseurl }}/analytics/dashboards/).
+- Syncs with filters.
 
 ## Tips/Troubleshooting
 - Use accurate date ranges.
 - Check module data.
 
 ## Next Steps
-- Customize dashboards in [Dashboards](dashboards
+- Customize dashboards in [Dashboards]({{ site.baseurl }}/analytics/dashboards/)
     

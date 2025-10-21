@@ -275,6 +275,6 @@ Available reports:
 - Refresh inventory
 
 ## Next Steps
-- Issue [Credit Notes](credit-notes.md)
-- Process [Refunds](../accounts/payments.md)
-- Update [Inventory](../inventory/adjustments.md)
+- Issue [Credit Notes]({{ site.baseurl }}/pos/credit-notes/)
+- Process [Refunds]({{ site.baseurl }}/accounts/payments/)
+- Update [Inventory]({{ site.baseurl }}/inventory/adjustments/)

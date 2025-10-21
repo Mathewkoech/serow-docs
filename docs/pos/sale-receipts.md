@@ -143,6 +143,6 @@ Displays:
 - Include all legal requirements
 
 ## Next Steps
-- Record [Payments](../accounts/payments.md)
-- View [Sales](sales.md)
-- Generate [Invoices](../accounts/invoices.md)
+- Record [Payments]({{ site.baseurl }}/accounts/payments/)
+- View [Sales]({{ site.baseurl }}/pos/sales/)
+- Generate Invoices (coming soon)

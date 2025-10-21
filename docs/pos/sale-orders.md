@@ -409,7 +409,7 @@ Available reports:
 - Maintain accurate inventory
 
 ## Next Steps
-- Create [Delivery Notes](delivery-notes.md)
-- Generate [Invoices](../accounts/invoices.md)
-- Process [Payments](../accounts/payments.md)
-- View [Sales Reports](sales.md)
+- Create [Delivery Notes]({{ site.baseurl }}/pos/delivery-notes/)
+- Generate Invoices (coming soon)
+- Process [Payments]({{ site.baseurl }}/accounts/payments/)
+- View [Sales Reports]({{ site.baseurl }}/pos/sales/)

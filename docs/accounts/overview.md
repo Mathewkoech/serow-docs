@@ -20,16 +20,16 @@ The Accounts module manages all financial operations including invoicing, paymen
 - **Taxcodes** - Tax configuration
 
 ### Daily Operations
-- **[Journal Entry](journals.md)** - Manual accounting entries
+- **[Journal Entry]({{ site.baseurl }}/accounts/journals/)** - Manual accounting entries
 - **Cashbooks** - Cash management
 - **Expenses** - Expense tracking
-- **[Payments](payments.md)** - Payment processing
+- **[Payments]({{ site.baseurl }}/accounts/payments/)** - Payment processing
 - **Payment Modes** - Payment method setup
-- **[Receipts](receipts.md)** - Receipt management
+- **[Receipts]({{ site.baseurl }}/accounts/receipts/)** - Receipt management
 - **Petty Cash** - Petty cash fund
 
 ### Financial Transactions
-- **[Invoices](invoices.md)** - Customer invoicing
+- **Invoices** - Customer invoicing (coming soon)
 - **Mpesa Transactions** - M-Pesa integration
 - **Transactions** - All financial transactions
 - **Counters** - Document numbering
@@ -37,7 +37,7 @@ The Accounts module manages all financial operations including invoicing, paymen
 ### Financial Reports
 - **General Ledger** - Complete ledger
 - **Profit & Loss** - P&L statement
-- **[Reports](reports.md)** - Financial reports
+- **[Reports]({{ site.baseurl }}/accounts/reports/)** - Financial reports
 
 ## Key Workflows
 
@@ -65,8 +65,8 @@ Journal Entries → Reconciliation → Reports → Close Period
 
 ## Getting Started
 
-1. Set up [Chart of Accounts](accounts.md)
-2. Configure [Tax Codes](taxcodes.md)
-3. Create [Invoices](invoices.md)
-4. Process [Payments](payments.md)
-5. Generate [Reports](reports.md)
+1. Set up Chart of Accounts
+2. Configure Tax Codes
+3. Process [Payments]({{ site.baseurl }}/accounts/payments/)
+4. Manage [Receipts]({{ site.baseurl }}/accounts/receipts/)
+5. Generate [Reports]({{ site.baseurl }}/accounts/reports/)

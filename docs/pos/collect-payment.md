@@ -241,6 +241,6 @@ Available reports:
 - Contact accounts team
 
 ## Next Steps
-- Generate [Sale Receipts](sale-receipts.md)
-- View [Transactions](transactions.md)
-- Check [Customer Accounts](../accounts/accounts.md)
+- Generate [Sale Receipts]({{ site.baseurl }}/pos/sale-receipts/)
+- View [Transactions]({{ site.baseurl }}/pos/transactions/)
+- Check [Customer Accounts]({{ site.baseurl }}/accounts/overview/)

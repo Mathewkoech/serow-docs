@@ -99,6 +99,6 @@ Displays:
 - Undeposited Receipts
 
 ## Next Steps
-- Record [Payments](payments.md)
-- Create [Invoices](invoices.md)
-- View [Transactions](transactions.md)
+- Record [Payments]({{ site.baseurl }}/accounts/payments/)
+- Create [Journal Entries]({{ site.baseurl }}/accounts/journals/)
+- View [Reports]({{ site.baseurl }}/accounts/reports/)

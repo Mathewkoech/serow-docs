@@ -22,13 +22,13 @@ Maintain detailed accounting entries and journal transactions.
 2. Filter by date or type.
 
 ## Integrations
-- Links to [Reports](reports.md).
-- Syncs with [Payments](payments.md).
+- Links to [Reports]({{ site.baseurl }}/accounts/reports/).
+- Syncs with [Payments]({{ site.baseurl }}/accounts/payments/).
 
 ## Tips/Troubleshooting
 - Balance debits and credits.
 - Check for posting errors.
 
 ## Next Steps
-- Manage invoices in [Invoices](invoices.md).
-- Generate reports in [Reports](reports.md).
+- Manage receipts in [Receipts]({{ site.baseurl }}/accounts/receipts/).
+- Generate reports in [Reports]({{ site.baseurl }}/accounts/reports/).

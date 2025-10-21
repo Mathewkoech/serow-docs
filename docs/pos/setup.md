@@ -31,5 +31,5 @@ Configure POS settings for sales, payment methods, and hardware.
 - Check network for sync issues.
 
 ## Next Steps
-- Process sales in [Sales](sales.md).
-- Manage sessions in [Sessions](sessions.md).
+- Process sales in [Sales]({{ site.baseurl }}/pos/sales/).
+- Manage sessions in [Sessions]({{ site.baseurl }}/pos/sessions/).

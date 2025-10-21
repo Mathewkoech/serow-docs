@@ -12,24 +12,24 @@ The POS module handles all sales transactions, from quotations to final payment 
 ## Module Sections
 
 ### Sales Process
-- **[Quotations](quotations.md)** - Create customer quotes
-- **[Sale Orders](sale-orders.md)** - Manage customer orders
-- **[Delivery Notes](delivery-notes.md)** - Track deliveries
-- **[Invoices](../accounts/invoices.md)** - Generate invoices
-- **[Sale Receipts](sale-receipts.md)** - Official receipts
+- **[Quotations]({{ site.baseurl }}/pos/quotations/)** - Create customer quotes
+- **[Sale Orders]({{ site.baseurl }}/pos/sale-orders/)** - Manage customer orders
+- **[Delivery Notes]({{ site.baseurl }}/pos/delivery-notes/)** - Track deliveries
+- **Invoices** - Generate invoices (coming soon)
+- **[Sale Receipts]({{ site.baseurl }}/pos/sale-receipts/)** - Official receipts
 
 ### Retail Operations
-- **[POS Retail](pos-retail.md)** - Point of sale interface
-- **[Sales](sales.md)** - View all sales
-- **[Sale Items](sale-items.md)** - Item-wise sales view
+- **[POS Retail]({{ site.baseurl }}/pos/pos-retail/)** - Point of sale interface
+- **[Sales]({{ site.baseurl }}/pos/sales/)** - View all sales
+- **[Sale Items]({{ site.baseurl }}/pos/sale-items/)** - Item-wise sales view
 
 ### Returns & Credits
-- **[Return Note](return-note.md)** - Process returns
-- **[Credit Notes](credit-notes.md)** - Issue credits
+- **[Return Note]({{ site.baseurl }}/pos/return-note/)** - Process returns
+- **[Credit Notes]({{ site.baseurl }}/pos/credit-notes/)** - Issue credits
 
 ### Payments
-- **[Collect Payment](collect-payment.md)** - Record payments
-- **[Transactions](transactions.md)** - All transactions
+- **[Collect Payment]({{ site.baseurl }}/pos/collect-payment/)** - Record payments
+- **[Transactions]({{ site.baseurl }}/pos/transactions/)** - All transactions
 
 ## Quick Workflow
 
@@ -67,7 +67,7 @@ Return Note → Credit Note → Refund
 
 ## Getting Started
 
-1. [Set Up POS](setup.md)
-2. [Create Quotation](quotations.md)
-3. [Process Sale Order](sale-orders.md)
-4. [Use POS Retail](pos-retail.md)
+1. Set up POS configuration
+2. [Create Quotation]({{ site.baseurl }}/pos/quotations/)
+3. [Process Sale Order]({{ site.baseurl }}/pos/sale-orders/)
+4. [Use POS Retail]({{ site.baseurl }}/pos/pos-retail/)

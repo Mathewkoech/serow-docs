@@ -22,13 +22,13 @@ Generate inventory reports for stock levels, movements, and valuation.
 2. Share with stakeholders.
 
 ## Integrations
-- Links to [Analytics](analytics.md) for deeper insights.
-- Updates from [Operations](operations.md).
+- Links to Analytics for deeper insights.
+- Updates from [Operations]({{ site.baseurl }}/inventory/operations/).
 
 ## Tips/Troubleshooting
 - Use filters for specific products.
 - Check data sync issues.
 
 ## Next Steps
-- Configure settings in [Configuration](configuration.md).
-- Manage products in [Products](products.md).
+- Configure settings in [Configuration]({{ site.baseurl }}/inventory/configuration/).
+- Manage products in [Products]({{ site.baseurl }}/inventory/products/).

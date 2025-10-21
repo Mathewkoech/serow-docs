@@ -199,7 +199,7 @@ Desktop and mobile apps support offline mode:
 - **Community**: Join user forums and discussions
 
 ## Next Steps
-- Read the [Getting Started](getting-started.md) guide
-- Configure your [Modules](#)
-- Invite your [Team Members](signup/invitations.md)
-- Start with [Inventory Setup](inventory/configuration.md)
+- Read the [Getting Started]({{ site.baseurl }}/getting-started/) guide
+- Configure your Modules (see module-specific documentation)
+- Invite your [Team Members]({{ site.baseurl }}/signup/invitations/)
+- Start with [Inventory Setup]({{ site.baseurl }}/inventory/configuration/)

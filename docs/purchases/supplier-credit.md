@@ -22,13 +22,13 @@ Manage credit notes or refunds from suppliers.
 2. Confirm application.
 
 ## Integrations
-- Links to [Bills](bills.md).
-- Syncs with [Payments](payments.md).
+- Links to [Bills]({{ site.baseurl }}/purchases/bills/).
+- Syncs with Payments.
 
 ## Tips/Troubleshooting
 - Verify credit eligibility.
 - Check supplier agreements.
 
 ## Next Steps
-- Manage bills in [Bills](bills.md).
-- Track suppliers in [Suppliers](suppliers.md).
+- Manage bills in [Bills]({{ site.baseurl }}/purchases/bills/).
+- Track suppliers in [Suppliers]({{ site.baseurl }}/purchases/suppliers/).

@@ -27,5 +27,5 @@ Access Serow ERP on the go with apps for web, iOS, Android, and desktop (Windows
 3. Sync data to access real-time updates.
 
 ## Next Steps
-- Start with [Getting Started](/getting-started/).
-- Review [Installation](/installation/) for setup details.
+- Start with [Getting Started]({{ site.baseurl }}/getting-started/)
+- Review [Installation]({{ site.baseurl }}/installation/) for setup details

@@ -22,13 +22,13 @@ Manage returns and issue refunds for completed sales.
 2. Export for accounting.
 
 ## Integrations
-- Updates [Sales](sales.md) records.
-- Syncs with [Accounts](accounts.md).
+- Updates [Sales]({{ site.baseurl }}/pos/sales/) records.
+- Syncs with Accounts.
 
 ## Tips/Troubleshooting
 - Verify return eligibility.
 - Check stock return in Inventory.
 
 ## Next Steps
-- Manage sessions in [Sessions](sessions.md).
-- Process sales in [Sales](sales.md).
+- Manage sessions in [Sessions]({{ site.baseurl }}/pos/sessions/).
+- Process sales in [Sales]({{ site.baseurl }}/pos/sales/).

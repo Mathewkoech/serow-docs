@@ -166,6 +166,6 @@ For credit notes above threshold:
 - Review filters
 
 ## Next Steps
-- Process [Returns](return-note.md)
-- View [Invoices](../accounts/invoices.md)
-- Track [Payments](../accounts/payments.md)
+- Process [Returns]({{ site.baseurl }}/pos/return-note/)
+- View Invoices (coming soon)
+- Track [Payments]({{ site.baseurl }}/accounts/payments/)

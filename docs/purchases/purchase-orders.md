@@ -23,7 +23,7 @@ Create and track orders from suppliers for inventory restocking.
 3. Save changes.
 
 ## Integrations
-- Links to [Received Items](received-items.md).
+- Links to [Received Items]({{ site.baseurl }}/purchases/received-items/).
 - Syncs with Inventory.
 
 ## Tips/Troubleshooting
@@ -31,5 +31,5 @@ Create and track orders from suppliers for inventory restocking.
 - Check stock updates.
 
 ## Next Steps
-- Manage bills in [Bills](bills.md).
-- Track suppliers in [Suppliers](suppliers.md).
+- Manage bills in [Bills]({{ site.baseurl }}/purchases/bills/).
+- Track suppliers in [Suppliers]({{ site.baseurl }}/purchases/suppliers/).

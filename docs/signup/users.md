@@ -126,6 +126,6 @@ Once roles are set up, you can invite users:
 - **Wrong permissions?** Reassign role or modify role permissions
 
 ## Next Steps
-- Set up more [Roles and Permissions](permissions.md)
-- Learn about [User Invitations](invitations.md)
+- Set up more [Roles and Permissions]({{ site.baseurl }}/signup/permissions/)
+- Learn about [User Invitations]({{ site.baseurl }}/signup/invitations/)
 - Configure branch access in Settings

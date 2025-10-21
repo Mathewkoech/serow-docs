@@ -12,7 +12,7 @@ The Analytics module provides comprehensive reports and dashboards for business 
 ## Module Sections
 
 ### Main Dashboard
-- **[Dashboard](dashboards.md)** - Executive summary dashboard
+- **[Dashboard]({{ site.baseurl }}/analytics/dashboards/)** - Executive summary dashboard
 
 ### Inventory Analytics
 - **Inventory** - Main inventory reports
@@ -177,14 +177,14 @@ All reports can be exported to:
 
 ## Getting Started
 
-1. Access [Dashboards](dashboards.md)
-2. Review [Inventory Reports](#)
-3. Check [Sales Reports](reports.md)
+1. Access [Dashboards]({{ site.baseurl }}/analytics/dashboards/)
+2. Review Inventory Reports
+3. Check [Sales Reports]({{ site.baseurl }}/analytics/reports/)
 4. Set up scheduled reports
 5. Configure alerts
 
 ## Next Steps
-- Explore [Dashboards](dashboards.md)
-- Generate [Reports](reports.md)
+- Explore [Dashboards]({{ site.baseurl }}/analytics/dashboards/)
+- Generate [Reports]({{ site.baseurl }}/analytics/reports/)
 - Set up automated alerts
 - Create custom reports

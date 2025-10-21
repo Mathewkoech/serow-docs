@@ -18,13 +18,13 @@ The Inventory module in Serow ERP helps you manage all aspects of your product i
 - **[Item Groups](#item-groups)** - Organize items into groups
 - **[Item Subgroups](#item-subgroups)** - Create subcategories
 - **[Item Categories](#item-categories)** - Categorize inventory items
-- **[Items](products.md)** - Main product catalog
+- **[Items]({{ site.baseurl }}/inventory/products/)** - Main product catalog
 
 ### Stock Management
 - **[Stock Requisition](#stock-requisition)** - Request stock transfers
 - **[Stock Transfers](#stock-transfers)** - Move stock between locations
 - **[Stock Received](#stock-received)** - Record received inventory
-- **[Stock Adjustment](adjustments.md)** - Adjust stock levels
+- **[Stock Adjustment]({{ site.baseurl }}/inventory/adjustments/)** - Adjust stock levels
 
 ### Branch & Location Management
 - **[Branch Stock](#branch-stock)** - View stock by branch
@@ -36,6 +36,162 @@ The Inventory module in Serow ERP helps you manage all aspects of your product i
 - **[Batches](#batches)** - Manage batch/lot numbers
 - **[Stock Health Check](#stock-health-check)** - Monitor inventory health
 - **[Pricing Formulae](#pricing-formulae)** - Set dynamic pricing rules
+
+![Stock Health Check]({{ site.baseurl }}/assets/images/inventory/stock-health-check.png)
+*Monitor inventory health with alerts for low stock, expired items, and overstock situations*
+
+---
+
+## Detailed Sub-Module Guide
+
+### Brands
+**Purpose**: Manage product manufacturers and brand names.
+- Create and organize product brands
+- Link items to specific brands
+- Filter and search by brand
+- Brand-wise reporting
+
+![Brands Management]({{ site.baseurl }}/assets/images/inventory/brands.png)
+*Manage product brands and link them to inventory items*
+
+### Item Forms
+**Purpose**: Define the physical form of products (e.g., Tablet, Capsule, Liquid, Powder).
+- Create custom item forms
+- Standardize product classifications
+- Useful for pharmaceutical and healthcare businesses
+- Link multiple items to same form
+
+### Item Strength
+**Purpose**: Set product strength or concentration (e.g., 500mg, 10%, 250ml).
+- Define strength variations
+- Support multiple units (mg, g, ml, %)
+- Track different strength variants
+- Essential for controlled substances
+
+![Item Strength Configuration]({{ site.baseurl }}/assets/images/inventory/strength.png)
+*Define product strength and concentration levels*
+
+### Item Groups
+**Purpose**: Organize items into main categories.
+- Create primary product groups
+- Hierarchical organization
+- Group-level reporting
+- Bulk operations on groups
+
+### Item Subgroups
+**Purpose**: Create subcategories under Item Groups.
+- Further classification refinement
+- Two-level categorization
+- Subgroup-specific pricing
+- Enhanced filtering options
+
+### Item Categories
+**Purpose**: Specific classification within groups.
+- Detailed product categorization
+- Cross-functional categories
+- Category-wise analytics
+- Custom category attributes
+
+### Items
+**Purpose**: Main product catalog management.
+- Complete product information
+- SKU and barcode management
+- Multi-level pricing
+- Stock tracking across branches
+- [Full Documentation]({{ site.baseurl }}/inventory/products/)
+
+### Stock Requisition
+**Purpose**: Request stock transfers between branches.
+- Create transfer requests
+- Approval workflow
+- Track requisition status
+- Generate transfer documents
+
+### Stock Transfers
+**Purpose**: Move inventory between locations.
+- Inter-branch transfers
+- In-transit tracking
+- Transfer approval process
+- Automatic stock updates
+
+### Stock Received
+**Purpose**: Record inventory receipts.
+- Receive from purchases
+- Receive from transfers
+- Update stock levels
+- Quality check recording
+
+### Stock Adjustment
+**Purpose**: Correct stock discrepancies.
+- Manual stock corrections
+- Damage/loss recording
+- Found items recording
+- Adjustment history tracking
+- [Full Documentation]({{ site.baseurl }}/inventory/adjustments/)
+
+### Branch Stock
+**Purpose**: View stock levels by branch location.
+- Branch-wise stock visibility
+- Multi-branch management
+- Stock allocation
+- Branch performance tracking
+
+![Branch Stock View]({{ site.baseurl }}/assets/images/inventory/branch-stock.png)
+*View and manage stock levels across different branch locations*
+
+### Shelf
+**Purpose**: Manage warehouse shelf locations.
+- Warehouse organization
+- Shelf/bin management
+- Location-based picking
+- Storage optimization
+
+![Shelf Management]({{ site.baseurl }}/assets/images/inventory/shelf.png)
+*Organize warehouse shelves and storage locations*
+
+### Branch Stock Movement
+**Purpose**: Track all stock movements between branches.
+- Movement history
+- Transfer analytics
+- Branch-to-branch flow
+- Movement reporting
+
+### Stock Take
+**Purpose**: Conduct physical inventory counts.
+- Physical count recording
+- System vs actual comparison
+- **Update Counted** - Update only counted items
+- **Update All** - Update all items, zero uncounted
+- Discrepancy reporting
+- [Operations Documentation]({{ site.baseurl }}/inventory/operations/)
+
+### Batches
+**Purpose**: Manage batch/lot numbers and expiry dates.
+- Batch number tracking
+- Expiry date management
+- FEFO/FIFO implementation
+- Batch-wise reporting
+- Recall management
+
+### Stock Health Check
+**Purpose**: Monitor inventory health and identify issues.
+- Low stock alerts
+- Overstock identification
+- Expiring items warnings
+- Slow-moving analysis
+- Dead stock detection
+- Stock optimization suggestions
+
+### Pricing Formulae
+**Purpose**: Set up dynamic pricing rules.
+- Formula-based pricing
+- Markup/markdown rules
+- Cost-plus pricing
+- Volume-based pricing
+- Branch-specific formulas
+- Automatic price updates
+
+---
 
 ## Quick Access Features
 
@@ -125,10 +281,10 @@ The Inventory module in Serow ERP helps you manage all aspects of your product i
 ## Getting Started
 
 ### For New Users
-1. Review [Configuration](configuration.md) to set up basics
-2. Learn about [Products](products.md) management
-3. Understand [Stock Adjustments](adjustments.md)
-4. Explore [Operations](operations.md) for daily tasks
+1. Review [Configuration]({{ site.baseurl }}/inventory/configuration/) to set up basics
+2. Learn about [Products]({{ site.baseurl }}/inventory/products/) management
+3. Understand [Stock Adjustments]({{ site.baseurl }}/inventory/adjustments/)
+4. Explore [Operations]({{ site.baseurl }}/inventory/operations/) for daily tasks
 
 ### For Administrators
 1. Configure Brands, Categories, Groups
@@ -138,7 +294,7 @@ The Inventory module in Serow ERP helps you manage all aspects of your product i
 5. Configure Stock Health Check parameters
 
 ## Next Steps
-- [Configure Inventory Settings](configuration.md)
-- [Add Your First Product](products.md)
-- [Learn About Stock Adjustments](adjustments.md)
-- [View Inventory Reports](reporting.md)
+- [Configure Inventory Settings]({{ site.baseurl }}/inventory/configuration/)
+- [Add Your First Product]({{ site.baseurl }}/inventory/products/)
+- [Learn About Stock Adjustments]({{ site.baseurl }}/inventory/adjustments/)
+- [View Inventory Reports]({{ site.baseurl }}/inventory/reporting/)

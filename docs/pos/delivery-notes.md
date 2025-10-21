@@ -230,6 +230,6 @@ Available reports:
 - Verify batch/serial numbers
 
 ## Next Steps
-- Generate [Invoices](../accounts/invoices.md)
-- Handle [Returns](return-note.md)
-- View [Sales Reports](sales.md)
+- Generate Invoices (coming soon)
+- Handle [Returns]({{ site.baseurl }}/pos/return-note/)
+- View [Sales Reports]({{ site.baseurl }}/pos/sales/)

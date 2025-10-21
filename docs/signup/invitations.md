@@ -244,7 +244,7 @@ Jane Smith,jane@company.com,Manager,Branch A,+254723456789
 - Keep user information current
 
 ## Next Steps
-- Learn about [User Management](users.md)
-- Understand [Roles and Permissions](permissions.md)
+- Learn about [User Management]({{ site.baseurl }}/signup/users/)
+- Understand [Roles and Permissions]({{ site.baseurl }}/signup/permissions/)
 - Configure branch settings in Settings module
 - Set up email notifications and alerts

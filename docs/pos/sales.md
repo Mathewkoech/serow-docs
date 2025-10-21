@@ -24,12 +24,12 @@ Process cash, credit, and refund transactions efficiently with Serow POS.
 
 ## Integrations
 - Updates Inventory stock.
-- Records in [Accounts](accounts.md).
+- Records in Accounts.
 
 ## Tips/Troubleshooting
 - Ensure stock is available in Inventory.
 - Check payment method setup.
 
 ## Next Steps
-- Manage sessions in [Sessions](sessions.md).
-- Handle refunds in [Refunds](refunds.md).
+- Manage sessions in [Sessions]({{ site.baseurl }}/pos/sessions/).
+- Handle refunds in [Refunds]({{ site.baseurl }}/pos/refunds/).

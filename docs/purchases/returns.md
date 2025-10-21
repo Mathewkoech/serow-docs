@@ -106,9 +106,9 @@ Monitor the status of your returns throughout the entire process.
 
 The Returns module seamlessly integrates with other Serow ERP modules:
 
-- **[Received Items](received-items/)**: Create returns directly from received item records
-- **[Purchase Orders](purchase-orders/)**: Reference original purchase orders
-- **[Supplier Credit](supplier-credit/)**: Automatically generate supplier credit notes
+- **[Received Items]({{ site.baseurl }}/purchases/received-items/)**: Create returns directly from received item records
+- **[Purchase Orders]({{ site.baseurl }}/purchases/purchase-orders/)**: Reference original purchase orders
+- **[Supplier Credit]({{ site.baseurl }}/purchases/supplier-credit/)**: Automatically generate supplier credit notes
 - **Inventory Module**: Update stock levels when returns are confirmed
 
 ## Tips & Troubleshooting
@@ -143,7 +143,7 @@ The Returns module seamlessly integrates with other Serow ERP modules:
 
 ## Next Steps
 
-- **[Purchase Orders](purchase-orders/)**: Manage your purchase orders
-- **[Supplier Credit](supplier-credit/)**: Handle supplier credits and refunds
-- **[Suppliers](suppliers/)**: Manage supplier information and relationships
-- **[Bills](bills/)**: Track and manage supplier bills
+- **[Purchase Orders]({{ site.baseurl }}/purchases/purchase-orders/)**: Manage your purchase orders
+- **[Supplier Credit]({{ site.baseurl }}/purchases/supplier-credit/)**: Handle supplier credits and refunds
+- **[Suppliers]({{ site.baseurl }}/purchases/suppliers/)**: Manage supplier information and relationships
+- **[Bills]({{ site.baseurl }}/purchases/bills/)**: Track and manage supplier bills

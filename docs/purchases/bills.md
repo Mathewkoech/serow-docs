@@ -24,13 +24,13 @@ Record and pay supplier invoices for received goods.
 3. Confirm payment.
 
 ## Integrations
-- Links to [Payments](payments.md).
-- Syncs with [Suppliers](suppliers.md).
+- Links to Payments.
+- Syncs with [Suppliers]({{ site.baseurl }}/purchases/suppliers/).
 
 ## Tips/Troubleshooting
 - Match bills to purchase orders.
 - Check payment status.
 
 ## Next Steps
-- Manage purchase orders in [Purchase Orders](purchase-orders.md).
-- Track supplier credit in [Supplier Credit](supplier-credit.md).
+- Manage purchase orders in [Purchase Orders]({{ site.baseurl }}/purchases/purchase-orders/).
+- Track supplier credit in [Supplier Credit]({{ site.baseurl }}/purchases/supplier-credit/).

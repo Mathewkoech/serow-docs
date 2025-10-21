@@ -308,7 +308,7 @@ Available quotation reports:
 - Contact support
 
 ## Next Steps
-- Convert to [Sale Orders](sale-orders.md)
-- Create [Invoices](../accounts/invoices.md)
-- Process [Payments](../accounts/payments.md)
-- View [Sales Reports](sales.md)
+- Convert to [Sale Orders]({{ site.baseurl }}/pos/sale-orders/)
+- Create Invoices (coming soon)
+- Process [Payments]({{ site.baseurl }}/accounts/payments/)
+- View [Sales Reports]({{ site.baseurl }}/pos/sales/)
