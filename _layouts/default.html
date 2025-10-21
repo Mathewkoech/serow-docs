@@ -747,22 +747,186 @@
         min-width: 300px;
       }
     }
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1001;
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.3s;
+    }
+    
+    .mobile-menu-toggle:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    
+    .mobile-menu-toggle:active {
+      transform: scale(0.95);
+    }
+    
     @media (max-width: 768px) {
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: static;
+      .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+      
+      .sidebar {
+        width: 280px;
+        position: fixed;
+        left: -280px;
+        top: 0;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+      }
+      
+      .sidebar.mobile-open {
+        left: 0;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.3);
+      }
+      
       .main-content {
         margin-left: 0;
-        padding: 20px;
+        padding: 80px 15px 20px 15px;
+        width: 100%;
         flex-direction: column;
       }
+      
+      .content-wrapper {
+        padding: 15px;
+      }
+      
+      .breadcrumb {
+        font-size: 0.85em;
+        margin-bottom: 15px;
+      }
+      
+      /* Better image handling on mobile */
+      .content-wrapper img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      
+      /* Improve code blocks on mobile */
+      .content-wrapper pre {
+        font-size: 0.85em;
+        padding: 12px;
+        overflow-x: auto;
+      }
+      
+      /* Better tables on mobile */
+      .content-wrapper table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.85em;
+      }
+      
+      /* Improve headings */
+      .content-wrapper h1 {
+        font-size: 1.8em;
+        margin-top: 0;
+      }
+      
+      .content-wrapper h2 {
+        font-size: 1.4em;
+      }
+      
+      .content-wrapper h3 {
+        font-size: 1.2em;
+      }
+      
+      /* Better touch targets */
+      .sidebar a {
+        padding: 12px 15px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .sidebar .nav-section {
+        padding: 12px 15px;
+        min-height: 44px;
+      }
+      
+      /* Footer improvements */
+      footer {
+        padding: 20px 15px;
+        font-size: 0.9em;
+      }
+      
+      .footer-socials {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+      
+      .footer-social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+      
+      /* WhatsApp button positioning */
+      .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+      }
+      
+      /* Search improvements */
+      .sidebar .search-container input {
+        font-size: 0.9em;
+        padding: 10px 36px;
+      }
+    }
+    
+    /* Mobile overlay for closing sidebar */
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .mobile-overlay.active {
+      display: block;
+      opacity: 1;
     }
   </style>
 </head>
 <body>
-  <aside class="sidebar">
+  <!-- Mobile Menu Toggle Button -->
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+    <i class="fas fa-bars"></i>
+  </button>
+  
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  
+  <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <h2><a href="{{ site.baseurl }}/" style="text-decoration: none; color: inherit;">Serow Docs</a></h2>
       <button class="theme-toggle" id="themeToggle" title="Toggle theme">
@@ -898,6 +1062,36 @@
   </a>
 
   <script>
+    // Mobile Menu Functionality
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    
+    function toggleMobileMenu() {
+      sidebar.classList.toggle('mobile-open');
+      mobileOverlay.classList.toggle('active');
+      const icon = mobileMenuToggle.querySelector('i');
+      if (sidebar.classList.contains('mobile-open')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    }
+    
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    mobileOverlay.addEventListener('click', toggleMobileMenu);
+    
+    // Close mobile menu when clicking a link
+    sidebar.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          toggleMobileMenu();
+        }
+      });
+    });
+    
     // Highlight active link and section based on current URL
     const currentPath = window.location.pathname;
     document.querySelectorAll('.sidebar a').forEach(link => {
