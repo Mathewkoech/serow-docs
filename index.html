@@ -2,7 +2,7 @@
 layout: none
 ---
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@ layout: none
   <!-- Apply theme BEFORE page renders to prevent flash -->
   <script>
     (function() {
-      const theme = localStorage.getItem('theme') || 'light';
+      const theme = localStorage.getItem('theme') || 'dark';
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
@@ -665,7 +665,7 @@ layout: none
   
   <!-- THEME TOGGLE BUTTON - TOP RIGHT CORNER -->
   <button id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle dark mode">
-    <span id="themeIcon">🌙</span>
+    <span id="themeIcon">☀️</span>
   </button>
 
   <aside class="sidebar" id="sidebar">
@@ -919,7 +919,7 @@ layout: none
       const html = document.documentElement;
       
       // Check for saved theme preference or default to 'dark'
-      const currentTheme = localStorage.getItem('theme') || 'light';
+      const currentTheme = localStorage.getItem('theme') || 'dark';
       html.setAttribute('data-theme', currentTheme);
       
       function updateThemeIcon(theme) {
