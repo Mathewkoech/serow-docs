@@ -29,34 +29,54 @@ Displays:
 
 ## Creating a Credit Note
 
-### From Return Note
-1. Process return in Return Note
-2. System auto-creates credit note
-3. Review and approve
-4. Issue to customer
+### From Sale Receipt
+1. Go to **POS** > **Sale Receipts**
+2. Open the specific sale receipt
+3. Click **Credit receipt** button
+4. **Item Selection Window** opens showing all items from the sale:
+   - Review all items from original sale
+   - Select **All Items** or
+   - Select **Specific Items** (check individual items)
+   - Adjust quantities if needed
+6. Click **Proceed** to create credit note
 
-### From Invoice Correction
-1. Go to **POS** > **Credit Notes**
-2. Click **Create Credit Note**
-3. Select customer
-4. Select original invoice
-5. Specify reason:
-   - Product return
-   - Billing error
-   - Damaged goods
-   - Overcharge
-   - Promotional adjustment
-   - Goodwill gesture
-6. Enter items and amounts
-7. Save and issue
+![Creating Credit Note from Sale Receipt]({{ site.baseurl }}/assets/images/pos/credit-note-from-sale.png)
+
+7. Credit note window opens with selected items
+8. Review and make final adjustments
+9. Click **Save**
+10. Credit note created in **Open** status
+
+
+### From Invoice
+1. Go to **POS** > **Invoices**
+2. Open the specific Invoice
+3. Click **Actions**
+4. Find **Credit invoice** and click
+5. **Item Selection Window** opens showing all invoice items:
+   - Review all items from original invoice
+   - Select **All Items** or
+   - Select **Specific Items** (check individual items)
+   - Adjust quantities if needed
+6. Click **Proceed** to create credit note
+
+![Creating Credit Note from Invoice]({{ site.baseurl }}/assets/images/pos/credit-note-from-invoice.png)
+
+7. Credit note window opens with selected items
+8. Review and make final adjustments
+9. Save and issue
 
 ### Standalone Credit Note
-1. Create new credit note
-2. Select customer
-3. Add items or amount
-4. Specify reason
+1. Go to **POS** > **Credit Notes**
+2. Create new credit note
+3. Select customer
+
+![Creating New Credit Note]({{ site.baseurl }}/assets/images/pos/create-new-credit-note.png)
+
+4. Add items or amount
 5. Get approval (if required)
-6. Issue to customer
+6. Save after checking items and amount
+7. Issue to customer
 
 ## Credit Note Details
 
@@ -96,51 +116,55 @@ Displays:
 5. Pay remaining balance
 
 ### Request Refund
-1. Customer requests cash refund
-2. Open credit note
-3. Click **Process Refund**
-4. Select refund method
-5. Get approval
-6. Process payment
-7. Mark as refunded
 
-### Transfer Credit
-1. Customer requests transfer (if allowed)
-2. Specify recipient
-3. Get approval
-4. Transfer credit
-5. Update both accounts
+If customer had paid for the sale, refund can be processed:
+
+1. Customer requests cash refund
+2. Open the approved credit note
+3. Click **Refund** button
+4. Refund window opens:
+   - Select payment account (cash, bank, mobile money, etc.)
+   - Enter refund amount
+   - Add notes/reference
+5. Click **Save**
+6. Refund transaction recorded
+7. Credit note marked as **Closed**
+8. Payment reflected in selected account
+
+**Note:** Refund button only appears for approved credit notes related to paid sales.
+
 
 ## Credit Note Status
 
-- **Draft** - Created, not issued
-- **Issued** - Given to customer, available for use
-- **Partially Applied** - Some credit used
-- **Fully Applied** - All credit used
-- **Refunded** - Cash refund processed
-- **Expired** - Past expiry date
+
 - **Void** - Cancelled
+- **Open** - open
+- **Closed** - closed
 
 ## Approval Workflow
 
-For credit notes above threshold:
-1. Created by sales staff
-2. Submitted for approval
-3. Manager reviews:
-   - Reason validity
-   - Amount correctness
-   - Policy compliance
-4. Approve or reject
-5. If approved, issued to customer
+### Approval and Stock Return
 
-## Reports
+Credit notes require approval before stock is returned:
 
-- Credit Notes by Customer
-- Credit Notes by Reason
-- Unapplied Credits
-- Credit Notes by Value
-- Expired Credits
-- Credit Note Aging
+1. **Create** credit note (Draft status)
+2. **Submit** for approval
+3. **Approval** (permission-based):
+   - Only users with approval permissions can approve
+   - Manager/supervisor reviews:
+     - Reason validity
+     - Amount correctness
+     - Policy compliance
+4. **Stock Return** - Once approved:
+   - Items automatically returned to inventory
+   - Stock levels updated
+   - Inventory transactions recorded
+5. **Issue** to customer
+
+**Important:** Stock is only returned to the system after approval. Draft or unapproved credit notes do not affect inventory.
+
+, stock returned and issued to customer
+
 
 ## Best Practices
 
@@ -156,7 +180,6 @@ For credit notes above threshold:
 ### Cannot Apply Credit
 - Check credit note status
 - Verify customer match
-- Check expiry date
 - Confirm available balance
 
 ### Credit Not Showing

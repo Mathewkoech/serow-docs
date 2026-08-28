@@ -22,13 +22,16 @@ Maintain detailed accounting entries and journal transactions.
 2. Filter by date or type.
 
 ## Integrations
-- Links to [Reports]({{ site.baseurl }}/accounts/reports/).
-- Syncs with [Payments]({{ site.baseurl }}/accounts/payments/).
+- Updates General Ledger automatically
+- Syncs with [Payments]({{ site.baseurl }}/accounts/payments/)
+- Appears in Profit & Loss statement
+- Links to [Cashbooks]({{ site.baseurl }}/accounts/cashbooks/)
 
 ## Tips/Troubleshooting
 - Balance debits and credits.
 - Check for posting errors.
 
 ## Next Steps
-- Manage receipts in [Receipts]({{ site.baseurl }}/accounts/receipts/).
-- Generate reports in [Reports]({{ site.baseurl }}/accounts/reports/).
+- Manage receipts in [Receipts]({{ site.baseurl }}/accounts/receipts/)
+- Track in [Cashbooks]({{ site.baseurl }}/accounts/cashbooks/)
+- Review General Ledger and Profit & Loss

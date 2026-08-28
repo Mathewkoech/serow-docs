@@ -2,7 +2,7 @@
 layout: none
 ---
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,42 +12,52 @@ layout: none
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Apply theme BEFORE page renders to prevent flash -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  
   <style>
     :root {
       --bg-primary: #ffffff;
-      --bg-secondary: #f8f9fa;
-      --bg-tertiary: #e9ecef;
-      --text-primary: #1a1a1a;
-      --text-secondary: #6c757d;
-      --text-tertiary: #868e96;
-      --border-color: #dee2e6;
-      --accent-color: #007bff;
-      --accent-hover: #0056b3;
-      --shadow: rgba(0, 0, 0, 0.05);
-      --shadow-hover: rgba(0, 123, 255, 0.15);
-      --icon-color: #6c757d;
+      --bg-secondary: #f8fafc;
+      --bg-tertiary: #f1f5f9;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-tertiary: #64748b;
+      --border-color: #e2e8f0;
+      --accent-color: #4f46e5;
+      --accent-hover: #4338ca;
+      --shadow: rgba(15, 23, 42, 0.06);
+      --shadow-hover: rgba(79, 70, 229, 0.18);
+      --icon-color: #64748b;
       --search-bg: #ffffff;
-      --code-bg: #f8f9fa;
+      --code-bg: #f1f5f9;
     }
     
     [data-theme="dark"] {
-      --bg-primary: #1a1a1a;
-      --bg-secondary: #2d2d2d;
-      --bg-tertiary: #3a3a3a;
-      --text-primary: #e9ecef;
-      --text-secondary: #adb5bd;
-      --text-tertiary: #868e96;
-      --border-color: #495057;
-      --accent-color: #4dabf7;
-      --accent-hover: #74c0fc;
-      --shadow: rgba(0, 0, 0, 0.3);
-      --shadow-hover: rgba(77, 171, 247, 0.25);
-      --icon-color: #adb5bd;
-      --search-bg: #2d2d2d;
-      --code-bg: #2d2d2d;
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-tertiary: #334155;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --text-tertiary: #94a3b8;
+      --border-color: #334155;
+      --accent-color: #818cf8;
+      --accent-hover: #a5b4fc;
+      --shadow: rgba(0, 0, 0, 0.35);
+      --shadow-hover: rgba(129, 140, 248, 0.28);
+      --icon-color: #94a3b8;
+      --search-bg: #1e293b;
+      --code-bg: #0f172a;
     }
     
     * {
+      box-sizing: border-box;
       transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
     
@@ -86,6 +96,15 @@ layout: none
       align-items: center;
       justify-content: space-between;
       margin-bottom: 20px;
+    }
+    
+    #themeToggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px var(--shadow-hover) !important;
+    }
+    
+    #themeToggle:active {
+      transform: scale(0.95);
     }
     .sidebar h2 {
       font-size: 1.4em;
@@ -179,15 +198,28 @@ layout: none
       color: var(--text-primary);
       text-decoration: none;
       font-weight: 500;
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 10px;
       padding: 8px 12px;
       border-radius: 6px;
       transition: all 0.2s;
       font-size: 0.9em;
     }
+    .sidebar ul li a .icon {
+      font-size: 1em;
+      width: 18px;
+      display: inline-flex;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--icon-color);
+    }
     .sidebar ul li a:hover {
       color: var(--accent-color);
       background: var(--bg-tertiary);
+    }
+    .sidebar ul li a:hover .icon {
+      color: var(--accent-color);
     }
     .sidebar ul li a.active {
       color: var(--accent-color);
@@ -252,16 +284,45 @@ layout: none
       text-align: center;
       background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
       color: white;
-      padding: 60px 20px;
-      border-radius: 12px;
+      padding: 64px 48px;
+      border-radius: 16px;
       margin-bottom: 40px;
       box-shadow: 0 4px 20px var(--shadow);
     }
     .hero h1 {
       font-size: 2.5em;
-      margin: 0 0 20px;
+      margin: 0 0 16px;
       font-weight: 700;
       letter-spacing: -0.02em;
+    }
+    .hero p {
+      max-width: 640px;
+      margin: 0 auto;
+      opacity: 0.95;
+      font-size: 1.05em;
+    }
+    .hero .quick-links {
+      justify-content: center;
+      margin-top: 28px;
+    }
+    .hero .btn {
+      background: #fff;
+      color: #0d6efd;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+    .hero .btn:hover {
+      background: #f8f9fa;
+      color: #0a58ca;
+    }
+    .hero .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+    }
+    .hero .btn-outline:hover {
+      background: #fff;
+      color: #0d6efd;
+      border-color: #fff;
     }
     .card-grid {
       display: grid;
@@ -272,7 +333,7 @@ layout: none
     .card {
       background: var(--bg-primary);
       border: 1px solid var(--border-color);
-      border-radius: 10px;
+      border-radius: 16px;
       padding: 24px;
       transition: all 0.3s ease;
       cursor: pointer;
@@ -313,7 +374,7 @@ layout: none
     .btn {
       display: inline-block;
       padding: 12px 24px;
-      background: linear-gradient(135deg, #007BFF 0%, #0056B3 100%);
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
       color: white;
       text-decoration: none;
       border-radius: 6px;
@@ -373,30 +434,121 @@ layout: none
       color: var(--accent-hover);
       text-decoration: underline;
     }
+    /* Mobile Search Bar */
+    .mobile-search-bar {
+      display: none;
+      position: fixed;
+      top: 65px;
+      left: 0;
+      right: 0;
+      background: var(--bg-primary);
+      padding: 10px 15px;
+      z-index: 1001;
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+    
+    .mobile-search-bar .search-container {
+      position: relative;
+      margin: 0 auto;
+      max-width: 500px;
+    }
+    
+    .mobile-search-bar .search-container input {
+      width: 100%;
+      padding: 10px 36px 10px 36px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 0.9em;
+      outline: none;
+      background: var(--search-bg);
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .mobile-search-bar .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--icon-color);
+      font-size: 14px;
+    }
+    
+    .mobile-search-bar #clearSearchMobile {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--icon-color);
+      cursor: pointer;
+      padding: 4px 8px;
+      font-size: 14px;
+      display: none;
+    }
+    
+    /* Mobile Header Bar */
+    .mobile-header {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg-primary);
+      padding: 10px 15px;
+      z-index: 1002;
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 8px var(--shadow);
+      align-items: center;
+      justify-content: space-between;
+      height: 65px;
+    }
+    
+    .mobile-header h3 {
+      margin: 0;
+      font-size: 1.2em;
+      color: var(--accent-color);
+      font-weight: 700;
+    }
+    
     /* Mobile Menu Toggle */
     .mobile-menu-toggle {
       display: none;
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      z-index: 1001;
-      background: var(--accent-color);
-      color: white;
-      border: none;
+      position: relative;
+      top: auto;
+      right: auto;
+      z-index: auto;
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
       border-radius: 8px;
       width: 45px;
       height: 45px;
-      font-size: 20px;
+      font-size: 18px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: all 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: all 0.2s;
+      flex-shrink: 0;
     }
     
     .mobile-menu-toggle:hover {
+      background: var(--accent-color);
+      color: white;
+      border-color: var(--accent-color);
       transform: scale(1.05);
     }
     
     @media (max-width: 768px) {
+      .mobile-header {
+        display: flex;
+      }
+
+      .mobile-search-bar {
+        display: block;
+      }
+      
       .mobile-menu-toggle {
         display: flex;
         align-items: center;
@@ -406,21 +558,30 @@ layout: none
       .sidebar {
         width: 280px;
         position: fixed;
-        left: -280px;
+        right: -280px;
+        left: auto;
         top: 0;
         height: 100vh;
         z-index: 1000;
-        transition: left 0.3s ease;
+        transition: right 0.3s ease;
       }
       
       .sidebar.mobile-open {
-        left: 0;
-        box-shadow: 4px 0 20px rgba(0,0,0,0.3);
+        right: 0;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.3);
       }
       
       .main-content {
         margin-left: 0;
-        padding: 80px 15px 20px 15px;
+        margin-right: 0;
+        padding: 130px 15px 20px 15px;
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      /* Hide right sidebar on mobile */
+      .right-sidebar {
+        display: none !important;
       }
       
       .hero {
@@ -441,7 +602,7 @@ layout: none
         text-align: center;
       }
       
-      .cards {
+      .card-grid {
         grid-template-columns: 1fr;
         gap: 20px;
       }
@@ -479,44 +640,59 @@ layout: none
       opacity: 1;
     }
   </style>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/serow-brand.css">
 </head>
 <body>
-  <!-- Mobile Menu Toggle Button -->
-  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-    <i class="fas fa-bars"></i>
-  </button>
+  <!-- Mobile Header Bar -->
+  <div class="mobile-header" id="mobileHeader">
+    <h3>Serow Docs</h3>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+  
+  <!-- Mobile Search Bar (visible on mobile)
+  <div class="mobile-search-bar" id="mobileSearchBar">
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="searchInputMobile" placeholder="Search docs..." />
+      <button id="clearSearchMobile" title="Clear search"><i class="fas fa-times"></i></button>
+    </div>
+  </div> -->
   
   <!-- Mobile Overlay -->
   <div class="mobile-overlay" id="mobileOverlay"></div>
   
+  <!-- THEME TOGGLE BUTTON - TOP RIGHT CORNER -->
+  <button id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle dark mode">
+    <span id="themeIcon">🌙</span>
+  </button>
+
   <aside class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-      <h2>Serow Docs</h2>
-      <button class="theme-toggle" id="themeToggle" title="Toggle theme">
-        <i class="fas fa-moon" id="themeIcon"></i>
-      </button>
+    <div class="sidebar-header" style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 10px !important; margin-bottom: 20px !important;">
+      <h2><a href="{{ site.baseurl }}/" style="text-decoration: none; color: inherit;">Serow Docs</a></h2>
     </div>
-    <div class="search-container">
+    <!-- <div class="search-container">
       <i class="fas fa-search search-icon"></i>
       <input type="text" id="searchInput" placeholder="Search docs..." />
       <button id="clearSearch" title="Clear search"><i class="fas fa-times"></i></button>
-    </div>
+    </div> -->
     <ul id="navLinks">
-      <li><a href="{{ site.baseurl }}/" class="active">Introduction</a></li>
-      <li><a href="{{ site.baseurl }}/getting-started/">Getting Started</a></li>
-      <li><a href="{{ site.baseurl }}/installation/">Installation Guide</a></li>
-      <li><a href="{{ site.baseurl }}/app/">Apps for Different OS</a></li>
+      <li><a href="{{ site.baseurl }}/" class="active"><span class="icon"><i class="fas fa-book"></i></span>Introduction</a></li>
+      <li><a href="{{ site.baseurl }}/getting-started/"><span class="icon"><i class="fas fa-rocket"></i></span>Getting Started</a></li>
+      <li><a href="{{ site.baseurl }}/installation/"><span class="icon"><i class="fas fa-cog"></i></span>Installation Guide</a></li>
+      <li><a href="{{ site.baseurl }}/app/"><span class="icon"><i class="fas fa-mobile-alt"></i></span>Apps for Different OS</a></li>
       <li>
-        <span class="nav-section">Sign Up Module</span>
+        <span class="nav-section"><span class="icon"><i class="fas fa-users"></i></span>Sign Up Module</span>
         <ul>
           <li><a href="{{ site.baseurl }}/signup/overview/">Overview</a></li>
           <li><a href="{{ site.baseurl }}/signup/users/">Users</a></li>
-          <li><a href="{{ site.baseurl }}/signup/permissions/">Permissions</a></li>
-          <li><a href="{{ site.baseurl }}/signup/invitations/">Invitations</a></li>
+          <li><a href="{{ site.baseurl }}/signup/permissions/">Roles & Permissions</a></li>
+          <li><a href="{{ site.baseurl }}/signup/invitations/">User Invitations</a></li>
         </ul>
       </li>
       <li>
-        <span class="nav-section">Inventory Module</span>
+        <span class="nav-section"><span class="icon"><i class="fas fa-boxes"></i></span>Inventory Module</span>
         <ul>
           <li><a href="{{ site.baseurl }}/inventory/overview/">Overview</a></li>
           <li><a href="{{ site.baseurl }}/inventory/products/">Items (Products)</a></li>
@@ -528,7 +704,7 @@ layout: none
         </ul>
       </li>
       <li>
-        <span class="nav-section">POS Module</span>
+        <span class="nav-section"><span class="icon"><i class="fas fa-cash-register"></i></span>POS Module</span>
         <ul>
           <li><a href="{{ site.baseurl }}/pos/overview/">Overview</a></li>
           <li><a href="{{ site.baseurl }}/pos/quotations/">Quotations</a></li>
@@ -546,42 +722,64 @@ layout: none
         </ul>
       </li>
       <li>
-        <span class="nav-section">Accounts Module</span>
+        <span class="nav-section"><span class="icon"><i class="fas fa-wallet"></i></span>Accounts Module</span>
         <ul>
           <li><a href="{{ site.baseurl }}/accounts/overview/">Overview</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/chart-of-accounts/">Chart of Accounts</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/taxcodes/">Taxcodes</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/cashbooks/">Cashbooks</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/expenses/">Expenses</a></li>
           <li><a href="{{ site.baseurl }}/accounts/payments/">Payments</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/payment-modes/">Payment Modes</a></li>
           <li><a href="{{ site.baseurl }}/accounts/receipts/">Receipts</a></li>
-          <li><a href="{{ site.baseurl }}/accounts/journals/">Journals</a></li>
-          <li><a href="{{ site.baseurl }}/accounts/reports/">Reports</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/journals/">Journal Entry</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/transactions/">Transactions</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/general-ledger/">General Ledger</a></li>
+          <li><a href="{{ site.baseurl }}/accounts/profit-loss/">Profit & Loss</a></li>
         </ul>
       </li>
       <li>
-        <span class="nav-section">Purchases Module</span>
+        <span class="nav-section"><span class="icon"><i class="fas fa-shopping-cart"></i></span>Purchases Module</span>
         <ul>
           <li><a href="{{ site.baseurl }}/purchases/overview/">Overview</a></li>
           <li><a href="{{ site.baseurl }}/purchases/suppliers/">Suppliers</a></li>
           <li><a href="{{ site.baseurl }}/purchases/purchase-orders/">Purchase Orders</a></li>
           <li><a href="{{ site.baseurl }}/purchases/bills/">Bills</a></li>
           <li><a href="{{ site.baseurl }}/purchases/received-items/">Received Items</a></li>
-          <li><a href="{{ site.baseurl }}/purchases/returns/">Returns</a></li>
+          <li><a href="{{ site.baseurl }}/purchases/returns/">Returned Items</a></li>
           <li><a href="{{ site.baseurl }}/purchases/supplier-credit/">Supplier Credit</a></li>
         </ul>
       </li>
       <li>
-        <span class="nav-section">Analytics Module</span>
+        <span class="nav-section"><span class="icon"><i class="fas fa-chart-line"></i></span>Analytics Module</span>
         <ul>
           <li><a href="{{ site.baseurl }}/analytics/overview/">Overview</a></li>
-          <li><a href="{{ site.baseurl }}/analytics/dashboards/">Dashboards</a></li>
+          <li><a href="{{ site.baseurl }}/analytics/dashboards/">Dashboard</a></li>
           <li><a href="{{ site.baseurl }}/analytics/reports/">Reports</a></li>
+          <li><a href="{{ site.baseurl }}/analytics/accounts/">Accounts Analytics</a></li>
+          <li><a href="{{ site.baseurl }}/analytics/pos/">POS Analytics</a></li>
+          <li><a href="{{ site.baseurl }}/analytics/customers/">Customers Analytics</a></li>
+          <li><a href="{{ site.baseurl }}/analytics/inventory/">Inventory Analytics</a></li>
+          <li><a href="{{ site.baseurl }}/analytics/purchases/">Purchases Analytics</a></li>
         </ul>
       </li>
     </ul>
   </aside>
 
   <div class="main-content">
+    <!-- Global Search Bar -->
+    <div class="global-search-container">
+      <div class="global-search-wrapper">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="globalSearch" placeholder="Search docs..." />
+        <button id="globalSearchClear" title="Clear search"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="globalSearchResults" class="global-search-results"></div>
+    </div>
+    
     <section class="hero">
       <h1>Welcome to Serow ERP Documentation</h1>
-      <p>Serow ERP is a modular, cloud-based platform to streamline your business operations. From inventory management to bulk SMS communications, Serow empowers SMBs with intuitive tools and real-time insights.</p>
+      <p>Serow ERP is a modular, cloud-based platform to streamline your business operations. From inventory and point of sale to accounts, purchases, and analytics, Serow gives SMBs intuitive tools and real-time insights.</p>
       <div class="quick-links">
         <a href="{{ site.baseurl }}/getting-started/" class="btn">Get Started</a>
         <a href="{{ site.baseurl }}/installation/" class="btn btn-outline">Installation Guide</a>
@@ -593,32 +791,32 @@ layout: none
       <h2>📚 Explore Modules</h2>
       <p>Choose a module to dive into detailed documentation and step-by-step guides.</p>
       <div class="card-grid">
-        <a href="{{ site.baseurl }}/signup/users/" class="card">
+        <a href="{{ site.baseurl }}/signup/overview/" class="card">
           <div class="card-icon"><i class="fas fa-users"></i></div>
           <h3>Sign Up Module</h3>
           <p>Manage users, permissions, and team invitations for secure access control.</p>
         </a>
-        <a href="{{ site.baseurl }}/inventory/configuration/" class="card">
+        <a href="{{ site.baseurl }}/inventory/overview/" class="card">
           <div class="card-icon"><i class="fas fa-boxes"></i></div>
           <h3>Inventory Module</h3>
           <p>Track products, manage stock levels, and handle inventory operations seamlessly.</p>
         </a>
-        <a href="{{ site.baseurl }}/pos/setup/" class="card">
+        <a href="{{ site.baseurl }}/pos/overview/" class="card">
           <div class="card-icon"><i class="fas fa-cash-register"></i></div>
           <h3>POS Module</h3>
           <p>Process sales, manage sessions, and handle refunds at your point of sale.</p>
         </a>
-        <a href="{{ site.baseurl }}/accounts/invoices/" class="card">
+        <a href="{{ site.baseurl }}/accounts/overview/" class="card">
           <div class="card-icon"><i class="fas fa-wallet"></i></div>
           <h3>Accounts Module</h3>
           <p>Create invoices, track payments, manage journals, and generate financial reports.</p>
         </a>
-        <a href="{{ site.baseurl }}/purchases/purchase-orders/" class="card">
+        <a href="{{ site.baseurl }}/purchases/overview/" class="card">
           <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
           <h3>Purchases Module</h3>
           <p>Handle purchase orders, supplier management, bills, and returns efficiently.</p>
         </a>
-        <a href="{{ site.baseurl }}/analytics/dashboards/" class="card">
+        <a href="{{ site.baseurl }}/analytics/overview/" class="card">
           <div class="card-icon"><i class="fas fa-chart-line"></i></div>
           <h3>Analytics Module</h3>
           <p>Visualize business data with dashboards and comprehensive reports.</p>
@@ -645,7 +843,7 @@ layout: none
           <h3>Process Your First Sale</h3>
           <p>Complete a transaction from start to finish using the POS system.</p>
         </a>
-        <a href="{{ site.baseurl }}/accounts/invoices/" class="card">
+        <a href="{{ site.baseurl }}/pos/invoices/" class="card">
           <div class="card-icon"><i class="fas fa-file-invoice"></i></div>
           <h3>Create an Invoice</h3>
           <p>Generate and send professional invoices to your customers.</p>
@@ -676,7 +874,7 @@ layout: none
     </section>
 
     <footer>
-      <p>&copy; 2025 Serow ERP. All rights reserved. | <a href="https://erp.serow.app">Visit Serow</a></p>
+      <p>&copy; 2026 Serow ERP. All rights reserved. | <a href="https://erp.serow.app">Visit Serow</a></p>
     </footer>
   </div>
 
@@ -689,13 +887,16 @@ layout: none
     function toggleMobileMenu() {
       sidebar.classList.toggle('mobile-open');
       mobileOverlay.classList.toggle('active');
+      document.body.style.overflow = sidebar.classList.contains('mobile-open') ? 'hidden' : '';
       const icon = mobileMenuToggle.querySelector('i');
       if (sidebar.classList.contains('mobile-open')) {
         icon.classList.remove('fa-bars');
         icon.classList.add('fa-times');
+        mobileMenuToggle.setAttribute('aria-expanded', 'true');
       } else {
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
       }
     }
     
@@ -711,34 +912,171 @@ layout: none
       });
     });
     
-    // Theme Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const html = document.documentElement;
-    
-    // Check for saved theme preference or default to 'dark'
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    html.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
-    
-    function updateThemeIcon(theme) {
-      if (theme === 'dark') {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-      } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-      }
-    }
-    
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = html.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    // Theme Toggle - Wrapped in DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      const html = document.documentElement;
       
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeIcon(newTheme);
+      // Check for saved theme preference or default to 'dark'
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      html.setAttribute('data-theme', currentTheme);
+      
+      function updateThemeIcon(theme) {
+        if (themeIcon) {
+          if (theme === 'dark') {
+            themeIcon.textContent = '☀️';
+          } else {
+            themeIcon.textContent = '🌙';
+          }
+        }
+      }
+      
+      // Update icon on load
+      updateThemeIcon(currentTheme);
+      
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = html.getAttribute('data-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          
+          html.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+          updateThemeIcon(newTheme);
+        });
+      }
     });
+
+    // Global Search Functionality - Wrapped in DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', function() {
+      const globalSearch = document.getElementById('globalSearch');
+      const globalSearchResults = document.getElementById('globalSearchResults');
+      const globalSearchClear = document.getElementById('globalSearchClear');
+      
+      // Navigation data for search
+      const navigationData = [
+      // Introduction
+      { title: 'Introduction', module: 'Home', url: '{{ site.baseurl }}/' },
+      { title: 'Getting Started', module: 'Getting Started', url: '{{ site.baseurl }}/getting-started/' },
+      { title: 'Installation Guide', module: 'Installation', url: '{{ site.baseurl }}/installation/' },
+      { title: 'Apps for Different OS', module: 'Apps', url: '{{ site.baseurl }}/app/' },
+      
+      // Sign Up Module
+      { title: 'Sign Up Overview', module: 'Sign Up', url: '{{ site.baseurl }}/signup/overview/' },
+      { title: 'Users', module: 'Sign Up', url: '{{ site.baseurl }}/signup/users/' },
+      { title: 'Roles & Permissions', module: 'Sign Up', url: '{{ site.baseurl }}/signup/permissions/' },
+      { title: 'User Invitations', module: 'Sign Up', url: '{{ site.baseurl }}/signup/invitations/' },
+      
+      // Inventory Module
+      { title: 'Inventory Overview', module: 'Inventory', url: '{{ site.baseurl }}/inventory/overview/' },
+      { title: 'Items (Products)', module: 'Inventory', url: '{{ site.baseurl }}/inventory/products/' },
+      { title: 'Configuration', module: 'Inventory', url: '{{ site.baseurl }}/inventory/configuration/' },
+      { title: 'Stock Operations', module: 'Inventory', url: '{{ site.baseurl }}/inventory/operations/' },
+      { title: 'Stock Take', module: 'Inventory', url: '{{ site.baseurl }}/inventory/operations/#stock-take' },
+      { title: 'Stock Adjustments', module: 'Inventory', url: '{{ site.baseurl }}/inventory/adjustments/' },
+      { title: 'Inventory Reporting', module: 'Inventory', url: '{{ site.baseurl }}/inventory/reporting/' },
+      
+      // POS Module
+      { title: 'POS Overview', module: 'POS', url: '{{ site.baseurl }}/pos/overview/' },
+      { title: 'Quotations', module: 'POS', url: '{{ site.baseurl }}/pos/quotations/' },
+      { title: 'Sale Orders', module: 'POS', url: '{{ site.baseurl }}/pos/sale-orders/' },
+      { title: 'Delivery Notes', module: 'POS', url: '{{ site.baseurl }}/pos/delivery-notes/' },
+      { title: 'Invoices', module: 'POS', url: '{{ site.baseurl }}/pos/invoices/' },
+      { title: 'Return Note', module: 'POS', url: '{{ site.baseurl }}/pos/return-note/' },
+      { title: 'Sale Receipts', module: 'POS', url: '{{ site.baseurl }}/pos/sale-receipts/' },
+      { title: 'POS Retail', module: 'POS', url: '{{ site.baseurl }}/pos/pos-retail/' },
+      { title: 'Collect Payment', module: 'POS', url: '{{ site.baseurl }}/pos/collect-payment/' },
+      { title: 'Sales', module: 'POS', url: '{{ site.baseurl }}/pos/sales/' },
+      { title: 'Sale Items', module: 'POS', url: '{{ site.baseurl }}/pos/sale-items/' },
+      { title: 'Credit Notes', module: 'POS', url: '{{ site.baseurl }}/pos/credit-notes/' },
+      { title: 'Transactions', module: 'POS', url: '{{ site.baseurl }}/pos/transactions/' },
+      
+      // Accounts Module
+      { title: 'Accounts Overview', module: 'Accounts', url: '{{ site.baseurl }}/accounts/overview/' },
+      { title: 'Chart of Accounts', module: 'Accounts', url: '{{ site.baseurl }}/accounts/chart-of-accounts/' },
+      { title: 'Taxcodes', module: 'Accounts', url: '{{ site.baseurl }}/accounts/taxcodes/' },
+      { title: 'Cashbooks', module: 'Accounts', url: '{{ site.baseurl }}/accounts/cashbooks/' },
+      { title: 'Expenses', module: 'Accounts', url: '{{ site.baseurl }}/accounts/expenses/' },
+      { title: 'Payments', module: 'Accounts', url: '{{ site.baseurl }}/accounts/payments/' },
+      { title: 'Payment Modes', module: 'Accounts', url: '{{ site.baseurl }}/accounts/payment-modes/' },
+      { title: 'Receipts', module: 'Accounts', url: '{{ site.baseurl }}/accounts/receipts/' },
+      { title: 'Journal Entry', module: 'Accounts', url: '{{ site.baseurl }}/accounts/journals/' },
+      { title: 'Transactions', module: 'Accounts', url: '{{ site.baseurl }}/accounts/transactions/' },
+      { title: 'General Ledger', module: 'Accounts', url: '{{ site.baseurl }}/accounts/general-ledger/' },
+      { title: 'Profit & Loss', module: 'Accounts', url: '{{ site.baseurl }}/accounts/profit-loss/' },
+      
+      // Purchases Module
+      { title: 'Purchases Overview', module: 'Purchases', url: '{{ site.baseurl }}/purchases/overview/' },
+      { title: 'Suppliers', module: 'Purchases', url: '{{ site.baseurl }}/purchases/suppliers/' },
+      { title: 'Purchase Orders', module: 'Purchases', url: '{{ site.baseurl }}/purchases/purchase-orders/' },
+      { title: 'Bills', module: 'Purchases', url: '{{ site.baseurl }}/purchases/bills/' },
+      { title: 'Received Items', module: 'Purchases', url: '{{ site.baseurl }}/purchases/received-items/' },
+      { title: 'Returned Items', module: 'Purchases', url: '{{ site.baseurl }}/purchases/returns/' },
+      { title: 'Supplier Credit', module: 'Purchases', url: '{{ site.baseurl }}/purchases/supplier-credit/' },
+      
+      // Analytics Module
+      { title: 'Analytics Overview', module: 'Analytics', url: '{{ site.baseurl }}/analytics/overview/' },
+      { title: 'Dashboard', module: 'Analytics', url: '{{ site.baseurl }}/analytics/dashboards/' },
+      { title: 'Reports', module: 'Analytics', url: '{{ site.baseurl }}/analytics/reports/' },
+      { title: 'Accounts Analytics', module: 'Analytics', url: '{{ site.baseurl }}/analytics/accounts/' },
+      { title: 'POS Analytics', module: 'Analytics', url: '{{ site.baseurl }}/analytics/pos/' },
+      { title: 'Customers Analytics', module: 'Analytics', url: '{{ site.baseurl }}/analytics/customers/' },
+      { title: 'Inventory Analytics', module: 'Analytics', url: '{{ site.baseurl }}/analytics/inventory/' },
+      { title: 'Purchases Analytics', module: 'Analytics', url: '{{ site.baseurl }}/analytics/purchases/' }
+    ];
+    
+      function performGlobalSearch(query) {
+        if (!globalSearchResults) return;
+        
+        if (!query.trim()) {
+          globalSearchResults.classList.remove('active');
+          return;
+        }
+        
+        const lowerQuery = query.toLowerCase();
+        const results = navigationData.filter(item => 
+          item.title.toLowerCase().includes(lowerQuery) ||
+          item.module.toLowerCase().includes(lowerQuery)
+        );
+        
+        if (results.length === 0) {
+          globalSearchResults.innerHTML = '<div class="search-no-results">No results found</div>';
+          globalSearchResults.classList.add('active');
+          return;
+        }
+        
+        const html = results.map(result => `
+          <div class="search-result-item" onclick="window.location.href='${result.url}'">
+            <span class="result-title">${result.title}</span>
+            <span class="result-module">${result.module}</span>
+          </div>
+        `).join('');
+        
+        globalSearchResults.innerHTML = html;
+        globalSearchResults.classList.add('active');
+      }
+      
+      if (globalSearch) {
+        globalSearch.addEventListener('input', (e) => {
+          performGlobalSearch(e.target.value);
+        });
+      }
+      
+      if (globalSearchClear) {
+        globalSearchClear.addEventListener('click', () => {
+          if (globalSearch) globalSearch.value = '';
+          if (globalSearchResults) globalSearchResults.classList.remove('active');
+        });
+      }
+      
+      // Close search results when clicking outside
+      if (globalSearchResults) {
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest('.global-search-container')) {
+            globalSearchResults.classList.remove('active');
+          }
+        });
+      }
 
     // Existing scripts
     
@@ -756,14 +1094,14 @@ layout: none
       }
     });
 
-    // Search functionality
+    // Search functionality (desktop sidebar) - DISABLED (using global search instead)
     const searchInput = document.getElementById('searchInput');
     const clearSearch = document.getElementById('clearSearch');
     const navLinks = document.getElementById('navLinks');
-    const allLinks = navLinks.querySelectorAll('a, .nav-section');
+    const allLinks = navLinks ? navLinks.querySelectorAll('a, .nav-section') : [];
 
-    searchInput.addEventListener('input', () => {
-      const query = searchInput.value.toLowerCase();
+    function performSearch(query) {
+      if (allLinks.length === 0) return;
       allLinks.forEach(link => {
         const text = link.textContent.toLowerCase();
         const parentLi = link.closest('li');
@@ -777,12 +1115,59 @@ layout: none
           parentLi.style.display = 'none';
         }
       });
-    });
+    }
 
-    clearSearch.addEventListener('click', () => {
-      searchInput.value = '';
+    function clearSearchResults() {
+      if (allLinks.length === 0) return;
       allLinks.forEach(link => {
         link.closest('li').style.display = 'block';
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+        performSearch(query);
+      });
+    }
+
+    if (clearSearch) {
+      clearSearch.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        clearSearchResults();
+      });
+    }
+
+    // Mobile search functionality - DISABLED (using global search instead)
+    const searchInputMobile = document.getElementById('searchInputMobile');
+    const clearSearchMobile = document.getElementById('clearSearchMobile');
+
+    if (searchInputMobile) {
+      searchInputMobile.addEventListener('input', () => {
+        const query = searchInputMobile.value.toLowerCase();
+        performSearch(query);
+        // Open sidebar automatically when searching on mobile
+        if (query && window.innerWidth <= 768 && !sidebar.classList.contains('mobile-open')) {
+          toggleMobileMenu();
+        }
+      });
+    }
+
+    if (clearSearchMobile) {
+      clearSearchMobile.addEventListener('click', () => {
+        if (searchInputMobile) searchInputMobile.value = '';
+        clearSearchResults();
+      });
+    }
+    }); // End of Global Search DOMContentLoaded
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.content table, .content-wrapper table, .main-content table').forEach(function(table) {
+        if (table.parentElement && table.parentElement.classList.contains('table-scroll')) return;
+        var wrap = document.createElement('div');
+        wrap.className = 'table-scroll';
+        table.parentNode.insertBefore(wrap, table);
+        wrap.appendChild(table);
       });
     });
   </script>

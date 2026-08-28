@@ -74,6 +74,25 @@ Displays:
 
 ## Receipt Actions
 
+### Credit Sale
+1. Open specific sale receipt
+2. Click **Actions** button
+3. Select **Credit Sale**
+4. **Item Selection Window** appears:
+   - Shows all items from the original sale
+   - Select **All Items** or **Specific Items**
+   - Adjust quantities as needed
+   - Click **Proceed**
+5. System creates new [Credit Note]({{ site.baseurl }}/pos/credit-notes/) with:
+   - Selected items from sale
+   - Original prices
+   - Customer information
+6. Review and make final adjustments
+7. Save credit note
+8. Submit for approval
+9. Once approved, stock returned to inventory
+10. Can process refund if customer paid
+
 ### Print Receipt
 - Print on thermal printer
 - Print on A4 paper

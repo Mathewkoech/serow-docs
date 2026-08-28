@@ -12,32 +12,23 @@ The Accounts module manages all financial operations including invoicing, paymen
 ## Module Sections
 
 ### Financial Setup
-- **Cost Centers** - Departmental accounting
-- **Tills** - Cash register management
-- **Budget** - Budget planning and tracking
-- **Accounts** - Chart of accounts
-- **Fiscal Years** - Financial periods
-- **Taxcodes** - Tax configuration
+- **[Chart of Accounts]({{ site.baseurl }}/accounts/chart-of-accounts/)** - Account structure setup
+- **[Taxcodes]({{ site.baseurl }}/accounts/taxcodes/)** - Tax configuration and rates
+- **[Payment Modes]({{ site.baseurl }}/accounts/payment-modes/)** - Payment method setup and configuration
 
 ### Daily Operations
 - **[Journal Entry]({{ site.baseurl }}/accounts/journals/)** - Manual accounting entries
-- **Cashbooks** - Cash management
-- **Expenses** - Expense tracking
-- **[Payments]({{ site.baseurl }}/accounts/payments/)** - Payment processing
-- **Payment Modes** - Payment method setup
-- **[Receipts]({{ site.baseurl }}/accounts/receipts/)** - Receipt management
-- **Petty Cash** - Petty cash fund
+- **[Cashbooks]({{ site.baseurl }}/accounts/cashbooks/)** - Cash management and reconciliation
+- **[Expenses]({{ site.baseurl }}/accounts/expenses/)** - Expense tracking and categorization
+- **[Payments]({{ site.baseurl }}/accounts/payments/)** - Payment processing and tracking
+- **[Receipts]({{ site.baseurl }}/accounts/receipts/)** - Receipt management and issuance
 
 ### Financial Transactions
-- **Invoices** - Customer invoicing (coming soon)
-- **Mpesa Transactions** - M-Pesa integration
-- **Transactions** - All financial transactions
-- **Counters** - Document numbering
+- **[Transactions]({{ site.baseurl }}/accounts/transactions/)** - All financial transactions history
 
 ### Financial Reports
-- **General Ledger** - Complete ledger
-- **Profit & Loss** - P&L statement
-- **[Reports]({{ site.baseurl }}/accounts/reports/)** - Financial reports
+- **[General Ledger]({{ site.baseurl }}/accounts/general-ledger/)** - Complete account ledger and balances
+- **[Profit & Loss]({{ site.baseurl }}/accounts/profit-loss/)** - Income statement and profitability
 
 ## Key Workflows
 
@@ -58,15 +49,29 @@ Journal Entries → Reconciliation → Reports → Close Period
 
 ## Integration
 
+The Accounts module integrates with:
 - **POS** - Sales and receipts
 - **Purchases** - Bills and payments
 - **Inventory** - Stock valuation
 - **Analytics** - Financial analysis
 
+## Common Filters
+
+Most Accounts submodules include the following filters:
+- **Date Range** - Filter transactions by date period
+- **Branch** - Filter by business branch
+- **Customer** - Filter by customer (where applicable)
+- **Supplier** - Filter by supplier (where applicable)
+- **Account** - Filter by account type
+- **Status** - Filter by transaction status
+
 ## Getting Started
 
-1. Set up Chart of Accounts
-2. Configure Tax Codes
-3. Process [Payments]({{ site.baseurl }}/accounts/payments/)
-4. Manage [Receipts]({{ site.baseurl }}/accounts/receipts/)
-5. Generate [Reports]({{ site.baseurl }}/accounts/reports/)
+1. Set up [Chart of Accounts]({{ site.baseurl }}/accounts/chart-of-accounts/)
+2. Configure [Taxcodes]({{ site.baseurl }}/accounts/taxcodes/)
+3. Create [Payment Modes]({{ site.baseurl }}/accounts/payment-modes/)
+4. Track [Cashbooks]({{ site.baseurl }}/accounts/cashbooks/)
+5. Record [Expenses]({{ site.baseurl }}/accounts/expenses/)
+6. Process [Payments]({{ site.baseurl }}/accounts/payments/)
+7. Manage [Receipts]({{ site.baseurl }}/accounts/receipts/)
+8. Review [General Ledger]({{ site.baseurl }}/accounts/general-ledger/) and [Profit & Loss]({{ site.baseurl }}/accounts/profit-loss/)

@@ -11,3 +11,6 @@ gem "minima", "~> 2.5"
 
 # For Ruby 3+ local serve compatibility
 gem "webrick", "~> 1.8"
+
+# Ruby 4.0 removed several stdlib gems from default gems
+gem "logger"

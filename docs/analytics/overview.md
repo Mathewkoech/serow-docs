@@ -12,48 +12,40 @@ The Analytics module provides comprehensive reports and dashboards for business 
 ## Module Sections
 
 ### Main Dashboard
-- **[Dashboard]({{ site.baseurl }}/analytics/dashboards/)** - Executive summary dashboard
-
-### Inventory Analytics
-- **Inventory** - Main inventory reports
-- **Transfer Analytics** - Stock transfer analysis
-- **Brand** - Brand performance
-- **ItemGroup** - Product group analysis
-- **Expiry Report** - Items nearing expiry
-- **Stock Movement Summary** - Stock flow tracking
-- **Inventory Valuation Summary** - Stock value reports
-- **Negative Sale Items** - Items sold with negative stock
-- **Stock Health Check** - Stock condition monitoring
-- **Items Never Sold** - Dead stock identification
-- **Below Reorder** - Low stock alerts
-
-### Purchases Analytics
-Expandable section for:
-- Purchase trends
-- Supplier performance
-- Cost analysis
-- Purchase order tracking
-
-### POS Analytics
-Reports including:
-- Sales trends
-- Customer behavior
-- Product performance
-- Cashier performance
-
-### Customer Analytics
-Customer insights:
-- Customer purchase patterns
-- Customer lifetime value
-- Top customers
-- Customer segmentation
+- **[Dashboard]({{ site.baseurl }}/analytics/dashboards/)** - Executive summary dashboard with KPIs and visual analytics
 
 ### Accounts Analytics
-Financial reports:
-- Revenue analysis
-- Expense tracking
-- Profitability analysis
-- Cash flow reports
+- **[Accounts Analytics]({{ site.baseurl }}/analytics/accounts/)** - Daily collections, payment methods, and financial reports
+  - Daily Collections - Track cash, M-Pesa, bank transfers by payment method
+  - Trial Balance - Account balances verification
+  - Cash Flow Report - Cash inflows and outflows
+  - Balance Sheet - Financial position
+  - Tax Report - Tax compliance and planning
+
+### POS Analytics
+- **[POS Analytics]({{ site.baseurl }}/analytics/pos/)** - Sales performance and item analytics
+  - Hourly Sales - Sales breakdown by hour
+  - Sales Analytics - Sales by company, branch, date, and salesperson
+  - Item Sales Analytics - Product performance, revenue, profit, and frequency
+
+### Customers Analytics
+- **[Customers Analytics]({{ site.baseurl }}/analytics/customers/)** - Customer insights and engagement
+  - Customer Sales Analytics - Customer purchasing patterns and value
+  - Customer Inquiries - Support tickets and engagement tracking
+  - Customer Ledgers - Account balances and payment history
+
+### Inventory Analytics
+- **[Inventory Analytics]({{ site.baseurl }}/analytics/inventory/)** - Stock health and valuation
+  - Expiry Report - Items approaching or past expiry dates
+  - Stock Health Check - Low stock and excess stock identification
+  - Stock Summary - Opening/closing stock and valuation by period
+  - Items Never Sold - Dead stock identification
+  - Below Reorder - Low stock alerts
+
+### Purchases Analytics
+- **[Purchases Analytics]({{ site.baseurl }}/analytics/purchases/)** - Procurement and supplier management
+  - Purchases vs Payment - Purchase orders vs actual payments
+  - Supplier Ledger - Supplier account balances and transaction history
 
 ## Key Reports
 

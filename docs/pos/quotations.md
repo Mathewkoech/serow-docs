@@ -21,7 +21,7 @@ The quotations list displays:
 - **Date** - Quotation creation date
 - **Valid Until** - Expiry date of the quotation
 - **Total Amount** - Total value of quoted items
-- **Status** - Draft, Sent, Accepted, Rejected, Expired
+- **Status** - Open, Accepted, Rejected
 - **Branch** - Branch that created the quotation
 
 ### Filtering & Searching
@@ -32,9 +32,9 @@ The quotations list displays:
 - Sort by any column
 
 ### List Actions
-- **Export** - Download quotations to Excel
+- **Export** - Download quotations to pdf
 - **Print** - Print selected quotations
-- **Bulk Actions** - Send, delete, or convert multiple quotations
+- **Bulk Actions** - Send,print or convert multiple quotations
 
 ## Creating a New Quotation
 

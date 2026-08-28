@@ -21,7 +21,7 @@ Displays:
 - **Date** - Receipt date
 - **Amount** - Receipt amount
 - **Payment Method** - Cash, Card, M-Pesa, etc.
-- **Status** - Issued, Void, Cancelled
+- **Status** - Used
 - **Invoice Reference** - Related invoice
 - **Received By** - Staff member
 - **Branch** - Issuing branch
@@ -35,9 +35,9 @@ Displays:
 ### Step 2: Customer & Payment Details
 - **Customer** - Select customer
 - **Receipt Date** - Date of receipt
-- **Payment Method** - How payment received
+- **Payment Method** - Select from configured [Payment Modes]({{ site.baseurl }}/accounts/payment-modes/)
 - **Amount** - Payment amount
-- **Reference Number** - Bank/transaction reference
+- **Reference Number** - Bank/transaction reference (may be required based on payment mode)
 - **Received By** - Staff name
 
 ### Step 3: Allocate to Invoices
@@ -79,26 +79,19 @@ Displays:
 - A4 format
 - Email PDF
 
-### Void Receipt
-- Requires authorization
-- Reason required
-- Updates accounts
-- Reverses payment
+### Refund Receipt
+- Requires permission
+- Deposit to required
+- Reference no
+- Amount
 
 ### Reprint Receipt
 - Access historical receipts
 - Marked as duplicate
 - Same receipt number
 
-## Reports
-
-- Receipts by Date
-- Receipts by Payment Method
-- Receipts by Customer
-- Voided Receipts
-- Undeposited Receipts
-
 ## Next Steps
 - Record [Payments]({{ site.baseurl }}/accounts/payments/)
 - Create [Journal Entries]({{ site.baseurl }}/accounts/journals/)
-- View [Reports]({{ site.baseurl }}/accounts/reports/)
+- Track in [Cashbooks]({{ site.baseurl }}/accounts/cashbooks/)
+- Review General Ledger and Profit & Loss

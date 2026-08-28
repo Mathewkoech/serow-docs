@@ -134,8 +134,8 @@ Option 2: Assign user to a different role
 
 ### To Disable a User:
 1. Settings → Users and Roles → Users
-2. Select user
-3. Toggle Active to OFF
+2. Find user and click three dots
+3. Select "Mark as Inactive"
 4. Save
 
 ## Documentation Pages

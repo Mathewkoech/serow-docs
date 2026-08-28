@@ -12,9 +12,9 @@ Manage returns and issue refunds for completed sales.
 ## Key Actions
 
 ### Issuing a Refund
-1. Go to **POS** > **Refunds**.
-2. Select sale from history.
-3. Enter refund amount and reason.
+1. Go to **POS** > **Credit Notes**.
+2. Select Credit note from list.
+3. Enter refund amount.
 4. Confirm and process.
 
 ### Tracking Refunds

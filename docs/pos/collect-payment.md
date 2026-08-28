@@ -29,13 +29,7 @@ Displays:
 ## Recording a Payment
 
 ### Step 1: Access Form
-1. Go to **POS** > **Collect Payment**
-2. Click **Record Payment** or **New**
-
-### Step 2: Customer Selection
-- Select customer
-- System loads unpaid invoices
-- Shows total outstanding
+1. Go to **POS** > **Collect Payment** and all pending sales listed in grid like
 
 ### Step 3: Payment Details
 - **Payment Date** - When received
@@ -48,7 +42,6 @@ Displays:
   - Bank Transfer
   - Other
 - **Reference Number** - Cheque #, Transaction ID, etc.
-- **Received By** - Staff name
 
 ### Step 4: Allocate to Invoices
 System shows unpaid invoices:
@@ -115,25 +108,8 @@ For cheque/bank transfer:
 
 ## Payment Status
 
-- **Pending** - Recorded, awaiting clearance
-- **Cleared** - Confirmed and applied
-- **Bounced** - Cheque bounced
-- **Reversed** - Payment reversed
-- **Partially Applied** - Applied to some invoices
-
-## Payment Matching
-
-### Auto-Matching
-- System matches by amount
-- Matches by customer
-- Matches by invoice reference
-- Suggests likely matches
-
-### Manual Matching
-- Search unmatched payments
-- Search unpaid invoices
-- Link manually
-- Confirm match
+- **Open** - open
+- **Closed** - Closed
 
 ## Overpayments
 
@@ -204,11 +180,6 @@ Available reports:
 - Customer ledger
 - Payment tracking
 - Aging reports
-
-### Banking
-- Bank reconciliation
-- Cash flow tracking
-- Deposit recording
 
 ## Best Practices
 

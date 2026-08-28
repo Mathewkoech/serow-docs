@@ -45,6 +45,7 @@ Displays:
 1. Go to **POS** > **Invoices**
 2. Click **Create Invoice** or **New**
 3. Fill in details manually
+4. Save
 
 ## Invoice Creation Steps
 
@@ -162,7 +163,7 @@ Displays:
 - Save changes
 
 ### Send Invoice
-- Click **Send** button
+- Click **Email** button
 - Verify email address
 - Customize email message
 - Attach PDF
@@ -178,17 +179,6 @@ Displays:
 - Company letterhead
 - Custom template
 - Save as PDF
-
-### Duplicate Invoice
-- Create copy
-- Edit details
-- Save as new invoice
-
-### Cancel Invoice
-- Mark as cancelled
-- Reason required
-- Reverses accounting entries
-- Cannot undo
 
 ### Void Invoice
 - Mark as void
@@ -218,12 +208,9 @@ Displays:
 ## Invoice Status
 
 - **Draft** - Not finalized
-- **Sent** - Emailed to customer
-- **Viewed** - Customer opened
 - **Partially Paid** - Partial payment received
 - **Paid** - Fully paid
 - **Overdue** - Past due date
-- **Cancelled** - Cancelled invoice
 - **Void** - Voided invoice
 
 ## Payment Status
@@ -232,7 +219,6 @@ Displays:
 - **Partially Paid** - Partial payment
 - **Paid** - Fully paid
 - **Overdue** - Past due and unpaid
-- **Refunded** - Payment refunded
 
 ## Invoice Details View
 
@@ -255,36 +241,6 @@ Displays:
 - Payment recordings
 - Status changes
 
-### Documents Tab
-- Original sale order
-- Delivery notes
-- Payment receipts
-- Credit notes
-
-### Communications Tab
-- Emails sent
-- Customer replies
-- Payment reminders
-- Notes and comments
-
-## Recurring Invoices
-
-### Set Up Recurring Invoice
-1. Create invoice template
-2. Set recurrence:
-   - Weekly
-   - Monthly
-   - Quarterly
-   - Annually
-3. Set start and end dates
-4. Auto-send option
-5. Save template
-
-### Managing Recurring
-- Pause recurrence
-- Edit template
-- Stop recurrence
-- View all instances
 
 ## Reports
 
@@ -294,8 +250,6 @@ Available invoice reports:
 - Overdue Invoices
 - Paid Invoices
 - Invoice Aging Report
-- Revenue by Invoice
-- Tax Summary
 - Outstanding Receivables
 
 ## Integration
@@ -309,11 +263,6 @@ Available invoice reports:
 - Link to deliveries
 - Proof of delivery
 - Delivery date tracking
-
-### Payments
-- Payment collection
-- Receipt generation
-- Account reconciliation
 
 ### Accounts Module
 - Accounts receivable

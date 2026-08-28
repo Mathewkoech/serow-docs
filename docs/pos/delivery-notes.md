@@ -30,7 +30,6 @@ Displays:
 - Filter by status
 - Filter by delivery date
 - Filter by branch
-- Filter by driver
 
 ## Creating Delivery Note
 
@@ -61,8 +60,6 @@ Displays:
 - **Delivery Address** - Full delivery address
 - **Contact Person** - Receiving person
 - **Contact Phone** - Contact number
-- **Delivery Date** - Scheduled date
-- **Delivery Time** - Preferred time
 - **Branch** - Dispatching location
 
 ### Delivery Details
