@@ -135,6 +135,7 @@ The Inventory module in Serow ERP helps you manage all aspects of your product i
 - Multi-branch management
 - Stock allocation
 - Branch performance tracking
+- **Submit to Glovo** — include this branch row in Glovo price and stock updates (see [Glovo]({{ site.baseurl }}/integrations/glovo/))
 
 ![Branch Stock View]({{ site.baseurl }}/assets/images/inventory/branch-stock.png)
 *View and manage stock levels across different branch locations*
@@ -242,6 +243,10 @@ The Inventory module in Serow ERP helps you manage all aspects of your product i
 - Branch-specific stock visibility
 - Stock availability checks
 
+### Channel integrations
+- **[Glovo]({{ site.baseurl }}/integrations/glovo/)** — push price and quantity from flagged branch stock
+- **[Shopify]({{ site.baseurl }}/integrations/shopify/)** — push sellable quantity; keep a dedicated online branch stocked by transfers
+
 ### Purchases Module
 - Automatic stock increase on purchase receipt
 - Supplier-item linking
@@ -298,3 +303,4 @@ The Inventory module in Serow ERP helps you manage all aspects of your product i
 - [Add Your First Product]({{ site.baseurl }}/inventory/products/)
 - [Learn About Stock Adjustments]({{ site.baseurl }}/inventory/adjustments/)
 - [View Inventory Reports]({{ site.baseurl }}/inventory/reporting/)
+- [Connect Glovo or Shopify]({{ site.baseurl }}/integrations/overview/)

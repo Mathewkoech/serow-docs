@@ -31,6 +31,8 @@ Set up dynamic pricing rules based on cost, markup percentage, or custom formula
 ## Integrations
 - Syncs with POS for real-time stock.
 - Links to Purchases for supplier orders.
+- **[Glovo]({{ site.baseurl }}/integrations/glovo/)** — enable in **Settings** > **Preferences**, then flag branch stock **Submit to Glovo**.
+- **[Shopify]({{ site.baseurl }}/integrations/shopify/)** — Serow is inventory master; Shopify is the online storefront. Work with Serow support for the first connect.
 
 ## Tips/Troubleshooting
 - Use Developer Mode for advanced UOM setups.

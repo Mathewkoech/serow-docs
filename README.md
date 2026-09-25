@@ -12,6 +12,7 @@ Serow ERP provides a lightweight alternative to platforms like Odoo, offering in
 - **Accounts Module**: Invoices, payments, journals, and financial reports
 - **Purchases Module**: Purchase orders, bills, suppliers, and returns
 - **Analytics Module**: Dashboards and business intelligence reports
+- **Integrations**: Glovo (price and stock) and Shopify (storefront quantity and Sale Orders)
 
 ## Getting Started
 
@@ -58,6 +59,7 @@ The built site will be available in the `_site/` directory.
 ├── docs/                # Documentation content organized by module
 │   ├── accounts/        # Accounts module documentation
 │   ├── analytics/       # Analytics module documentation
+│   ├── integrations/    # Glovo and Shopify channel docs
 │   ├── inventory/       # Inventory module documentation
 │   ├── pos/            # POS module documentation
 │   ├── purchases/      # Purchases module documentation

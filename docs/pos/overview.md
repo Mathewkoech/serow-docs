@@ -64,6 +64,8 @@ Return Note → Credit Note → Refund
 - **Accounts** - Financial recording
 - **Customers** - Purchase history
 - **Analytics** - Sales reports
+- **[Shopify]({{ site.baseurl }}/integrations/shopify/)** - Online orders land as Sale Orders; convert them to deduct stock
+- **[Glovo]({{ site.baseurl }}/integrations/glovo/)** - Till sales change branch quantity, which is later pushed to Glovo
 
 ## Getting Started
 

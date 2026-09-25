@@ -763,6 +763,14 @@ layout: none
           <li><a href="{{ site.baseurl }}/analytics/purchases/">Purchases Analytics</a></li>
         </ul>
       </li>
+      <li>
+        <span class="nav-section"><span class="icon"><i class="fas fa-plug"></i></span>Integrations</span>
+        <ul>
+          <li><a href="{{ site.baseurl }}/integrations/overview/">Overview</a></li>
+          <li><a href="{{ site.baseurl }}/integrations/glovo/">Glovo</a></li>
+          <li><a href="{{ site.baseurl }}/integrations/shopify/">Shopify</a></li>
+        </ul>
+      </li>
     </ul>
   </aside>
 
@@ -779,7 +787,7 @@ layout: none
     
     <section class="hero">
       <h1>Welcome to Serow ERP Documentation</h1>
-      <p>Serow ERP is a modular, cloud-based platform to streamline your business operations. From inventory and point of sale to accounts, purchases, and analytics, Serow gives SMBs intuitive tools and real-time insights.</p>
+      <p>Serow ERP is a modular, cloud-based platform to streamline your business operations. From inventory and point of sale to accounts, purchases, analytics, and channel integrations, Serow gives SMBs intuitive tools and real-time insights.</p>
       <div class="quick-links">
         <a href="{{ site.baseurl }}/getting-started/" class="btn">Get Started</a>
         <a href="{{ site.baseurl }}/installation/" class="btn btn-outline">Installation Guide</a>
@@ -820,6 +828,11 @@ layout: none
           <div class="card-icon"><i class="fas fa-chart-line"></i></div>
           <h3>Analytics Module</h3>
           <p>Visualize business data with dashboards and comprehensive reports.</p>
+        </a>
+        <a href="{{ site.baseurl }}/integrations/overview/" class="card">
+          <div class="card-icon"><i class="fas fa-plug"></i></div>
+          <h3>Integrations</h3>
+          <p>Push stock and prices to Glovo and Shopify. Online orders arrive as Sale Orders in Serow.</p>
         </a>
       </div>
     </section>
@@ -1022,7 +1035,12 @@ layout: none
       { title: 'POS Analytics', module: 'Analytics', url: '{{ site.baseurl }}/analytics/pos/' },
       { title: 'Customers Analytics', module: 'Analytics', url: '{{ site.baseurl }}/analytics/customers/' },
       { title: 'Inventory Analytics', module: 'Analytics', url: '{{ site.baseurl }}/analytics/inventory/' },
-      { title: 'Purchases Analytics', module: 'Analytics', url: '{{ site.baseurl }}/analytics/purchases/' }
+      { title: 'Purchases Analytics', module: 'Analytics', url: '{{ site.baseurl }}/analytics/purchases/' },
+
+      // Integrations
+      { title: 'Integrations Overview', module: 'Integrations', url: '{{ site.baseurl }}/integrations/overview/' },
+      { title: 'Glovo Integration', module: 'Integrations', url: '{{ site.baseurl }}/integrations/glovo/' },
+      { title: 'Shopify Integration', module: 'Integrations', url: '{{ site.baseurl }}/integrations/shopify/' }
     ];
     
       function performGlobalSearch(query) {

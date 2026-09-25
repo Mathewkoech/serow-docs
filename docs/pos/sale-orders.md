@@ -325,6 +325,11 @@ Available reports:
 
 ## Integration
 
+### Shopify
+- Paid **Online Store** orders create an open Sale Order on the Shopify / Online branch (notes like `Shopify #1001`)
+- Convert the Sale Order when goods leave — that deducts branch stock
+- Do not treat Shopify POS as the sales channel; see **[Shopify integration]({{ site.baseurl }}/integrations/shopify/)**
+
 ### Quotations
 - Convert quotation to sale order
 - Inherit all quotation details
@@ -413,3 +418,4 @@ Available reports:
 - Generate Invoices (coming soon)
 - Process [Payments]({{ site.baseurl }}/accounts/payments/)
 - View [Sales Reports]({{ site.baseurl }}/pos/sales/)
+- Fulfil [Shopify online orders]({{ site.baseurl }}/integrations/shopify/)

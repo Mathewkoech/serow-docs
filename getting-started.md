@@ -19,6 +19,7 @@ Serow ERP is a modern, cloud-based platform designed specifically for small to m
 - **Real-Time Insights**: Get instant reports and analytics
 - **Mobile-Responsive**: Work on any device
 - **Scalable**: Grow with your business
+- **Channel integrations**: Push stock to [Glovo]({{ site.baseurl }}/integrations/glovo/) and [Shopify]({{ site.baseurl }}/integrations/shopify/); online orders become Sale Orders in Serow
 
 ## Quick Start
 

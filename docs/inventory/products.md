@@ -308,6 +308,7 @@ Available reports for items:
 - Include category/group prefix
 - Make codes meaningful
 - Example: MED-PAR-500 (Medicine-Paracetamol-500mg)
+- Item **Code** is the SKU sent to [Glovo]({{ site.baseurl }}/integrations/glovo/) and [Shopify]({{ site.baseurl }}/integrations/shopify/) — keep channel catalogs identical
 
 ### Inventory Tracking
 - Enable for all sellable items
@@ -363,3 +364,4 @@ Available reports for items:
 - [Learn About Stock Operations]({{ site.baseurl }}/inventory/operations/)
 - [View Inventory Reports]({{ site.baseurl }}/inventory/reporting/)
 - [Inventory Configuration]({{ site.baseurl }}/inventory/configuration/)
+- [Connect Glovo or Shopify]({{ site.baseurl }}/integrations/overview/)
